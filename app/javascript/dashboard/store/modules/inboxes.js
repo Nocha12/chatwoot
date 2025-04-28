@@ -117,6 +117,9 @@ export const getters = {
         (item.channel_type === INBOX_TYPES.TWILIO && item.medium === 'sms')
     );
   },
+  getApiInboxes($state) {
+    return $state.records.filter(item => item.channel_type === INBOX_TYPES.API);
+  },
   dialogFlowEnabledInboxes($state) {
     return $state.records.filter(
       item => item.channel_type !== INBOX_TYPES.EMAIL

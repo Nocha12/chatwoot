@@ -18,7 +18,10 @@ const { t } = useI18n();
 const formState = {
   uiFlags: useMapGetter('campaigns/getUIFlags'),
   labels: useMapGetter('labels/getLabels'),
-  inboxes: useMapGetter('inboxes/getSMSInboxes'),
+  inboxes: computed(() => [
+    ...useMapGetter('inboxes/getSMSInboxes').value,
+    ...useMapGetter('inboxes/getApiInboxes').value,
+  ]),
 };
 
 const initialState = {

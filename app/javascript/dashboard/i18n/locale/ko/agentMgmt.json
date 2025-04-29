@@ -77,9 +77,9 @@
           "PLACEHOLDER": "에이전트의 이메일 주소를 입력하십시오."
         },
         "AGENT_AVAILABILITY": {
-          "LABEL": "유용성",
-          "PLACEHOLDER": "",
-          "ERROR": "Availability is required"
+          "LABEL": "가능 상태",
+          "PLACEHOLDER": "가능 상태를 선택하세요",
+          "ERROR": "가능 상태는 필수입니다"
         },
         "SUBMIT": "에이전트 수정"
       },
@@ -116,7 +116,7 @@
         "PLACEHOLDER": {
           "AGENT": "에이전트 찾기",
           "TEAM": "팀 찾기",
-          "INPUT": "Search for agents"
+          "INPUT": "에이전트를 검색하세요"
         }
       }
     }

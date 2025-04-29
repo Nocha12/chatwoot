@@ -1,6 +1,6 @@
 {
   "GENERAL": {
-    "SHOWING_RESULTS": "Showing {firstIndex}-{lastIndex} of {totalCount} items",
+    "SHOWING_RESULTS": "{totalCount}개 중 {firstIndex}-{lastIndex} 항목 표시",
     "PHONE_INPUT": {
       "PLACEHOLDER": "검색",
       "EMPTY_STATE": "검색 결과가 없습니다"

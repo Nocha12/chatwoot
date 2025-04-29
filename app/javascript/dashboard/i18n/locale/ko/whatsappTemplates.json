@@ -1,25 +1,25 @@
 {
     "WHATSAPP_TEMPLATES": {
         "MODAL": {
-            "TITLE": "Whatsapp Templates",
-            "SUBTITLE": "Select the whatsapp template you want to send",
-            "TEMPLATE_SELECTED_SUBTITLE": "Process {templateName}"
+            "TITLE": "WhatsApp 템플릿",
+            "SUBTITLE": "보낼 WhatsApp 템플릿을 선택하세요",
+            "TEMPLATE_SELECTED_SUBTITLE": "템플릿 {templateName} 처리"
         },
         "PICKER": {
-            "SEARCH_PLACEHOLDER": "Search Templates",
-            "NO_TEMPLATES_FOUND": "No templates found for",
+            "SEARCH_PLACEHOLDER": "템플릿 검색",
+            "NO_TEMPLATES_FOUND": "템플릿을 찾을 수 없습니다",
             "LABELS": {
                 "LANGUAGE": "언어",
-                "TEMPLATE_BODY": "Template Body",
-                "CATEGORY": "Category"
+                "TEMPLATE_BODY": "템플릿 본문",
+                "CATEGORY": "카테고리"
             }
         },
         "PARSER": {
-            "VARIABLES_LABEL": "Variables",
-            "VARIABLE_PLACEHOLDER": "Enter {variable} value",
-            "GO_BACK_LABEL": "Go Back",
-            "SEND_MESSAGE_LABEL": "Send Message",
-            "FORM_ERROR_MESSAGE": "Please fill all variables before sending"
+            "VARIABLES_LABEL": "변수",
+            "VARIABLE_PLACEHOLDER": "{variable} 값을 입력하세요",
+            "GO_BACK_LABEL": "뒤로 가기",
+            "SEND_MESSAGE_LABEL": "메시지 전송",
+            "FORM_ERROR_MESSAGE": "전송하기 전에 모든 변수를 입력해주세요"
         }
     }
 }

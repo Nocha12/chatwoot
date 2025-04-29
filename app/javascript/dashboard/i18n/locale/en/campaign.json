@@ -111,6 +111,12 @@
             "PLACEHOLDER": "Please enter the message of campaign",
             "ERROR": "Message is required"
           },
+          "ATTACHMENTS": {
+            "LABEL": "Image attachments",
+            "ADD": "Add images",
+            "PLACEHOLDER": "Add images to send with your campaign",
+            "ERROR": "Failed to upload image"
+          },
           "INBOX": {
             "LABEL": "Select Inbox",
             "PLACEHOLDER": "Select Inbox",

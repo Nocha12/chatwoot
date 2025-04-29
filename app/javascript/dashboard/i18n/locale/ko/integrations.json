@@ -2,354 +2,352 @@
   "INTEGRATION_SETTINGS": {
     "SHOPIFY": {
       "DELETE": {
-        "TITLE": "Delete Shopify Integration",
-        "MESSAGE": "Are you sure you want to delete the Shopify integration?"
+        "TITLE": "Shopify 연동 삭제",
+        "MESSAGE": "Shopify 연동을 삭제하시겠습니까?"
       },
       "STORE_URL": {
-        "TITLE": "Connect Shopify Store",
-        "LABEL": "Store URL",
+        "TITLE": "Shopify 스토어 연결",
+        "LABEL": "스토어 URL",
         "PLACEHOLDER": "your-store.myshopify.com",
-        "HELP": "Enter your Shopify store's myshopify.com URL",
+        "HELP": "Shopify 스토어의 myshopify.com URL을 입력하세요",
         "CANCEL": "취소",
-        "SUBMIT": "Connect Store"
+        "SUBMIT": "스토어 연결"
       },
-      "ERROR": "There was an error connecting to Shopify. Please try again or contact support if the issue persists."
+      "ERROR": "Shopify 연결 중 오류가 발생했습니다. 다시 시도하거나 문제가 지속되면 지원팀에 문의하세요."
     },
-    "HEADER": "통합",
-    "DESCRIPTION": "Chatwoot integrates with multiple tools and services to improve your team's efficiency. Explore the list below to configure your favorite apps.",
-    "LEARN_MORE": "Learn more about integrations",
-    "LOADING": "Fetching integrations",
+    "HEADER": "연동",
+    "DESCRIPTION": "Chatwoot은 팀 효율성을 높이기 위해 여러 도구 및 서비스와 연동됩니다. 아래 목록을 탐색하여 즐겨 사용하는 앱을 구성하세요.",
+    "LEARN_MORE": "연동에 대해 자세히 알아보기",
+    "LOADING": "연동 정보 가져오는 중",
     "CAPTAIN": {
-      "DISABLED": "Captain is not enabled on your account.",
-      "CLICK_HERE_TO_CONFIGURE": "Click here to configure",
-      "LOADING_CONSOLE": "Loading Captain Console...",
-      "FAILED_TO_LOAD_CONSOLE": "Failed to load Captain Console. Please refresh and try again."
+      "DISABLED": "Captain이 계정에서 활성화되지 않았습니다.",
+      "CLICK_HERE_TO_CONFIGURE": "구성하려면 여기를 클릭하세요",
+      "LOADING_CONSOLE": "Captain 콘솔 로딩 중...",
+      "FAILED_TO_LOAD_CONSOLE": "Captain 콘솔을 로드하지 못했습니다. 새로 고침하고 다시 시도하세요."
     },
     "WEBHOOK": {
-      "SUBSCRIBED_EVENTS": "Subscribed Events",
-      "LEARN_MORE": "Learn more about webhooks",
+      "SUBSCRIBED_EVENTS": "구독된 이벤트",
+      "LEARN_MORE": "웹훅에 대해 자세히 알아보기",
       "FORM": {
         "CANCEL": "취소",
-        "DESC": "웹훅 이벤트는 Chatwoot 계정에서 일어나는 일에 대한 실시간 정보를 제공합니다. 콜백을 구성하려면 유효한 URL을 입력하십시오.",
+        "DESC": "웹훅 이벤트는 Chatwoot 계정에서 발생하는 일에 대한 실시간 정보를 제공합니다. 콜백을 구성하려면 유효한 URL을 입력하세요.",
         "SUBSCRIPTIONS": {
-          "LABEL": "Events",
+          "LABEL": "이벤트",
           "EVENTS": {
-            "CONVERSATION_CREATED": "Conversation Created",
-            "CONVERSATION_STATUS_CHANGED": "Conversation Status Changed",
-            "CONVERSATION_UPDATED": "Conversation Updated",
-            "MESSAGE_CREATED": "Message created",
-            "MESSAGE_UPDATED": "Message updated",
-            "WEBWIDGET_TRIGGERED": "Live chat widget opened by the user",
-            "CONTACT_CREATED": "Contact created",
-            "CONTACT_UPDATED": "Contact updated"
+            "CONVERSATION_CREATED": "대화 생성됨",
+            "CONVERSATION_STATUS_CHANGED": "대화 상태 변경됨",
+            "CONVERSATION_UPDATED": "대화 업데이트됨",
+            "MESSAGE_CREATED": "메시지 생성됨",
+            "MESSAGE_UPDATED": "메시지 업데이트됨",
+            "WEBWIDGET_TRIGGERED": "사용자가 실시간 채팅 위젯을 염",
+            "CONTACT_CREATED": "연락처 생성됨",
+            "CONTACT_UPDATED": "연락처 업데이트됨"
           }
         },
         "END_POINT": {
           "LABEL": "웹훅 URL",
-          "PLACEHOLDER": "Example: {webhookExampleURL}",
-          "ERROR": "올바른 URL을 입력하십시오."
+          "PLACEHOLDER": "예: {webhookExampleURL}",
+          "ERROR": "유효한 URL을 입력하세요"
         },
-        "EDIT_SUBMIT": "Update webhook",
-        "ADD_SUBMIT": "웹훅 만들기"
+        "EDIT_SUBMIT": "웹훅 업데이트",
+        "ADD_SUBMIT": "웹훅 생성"
       },
       "TITLE": "웹훅",
       "CONFIGURE": "구성",
       "HEADER": "웹훅 설정",
       "HEADER_BTN_TXT": "새 웹훅 추가",
-      "LOADING": "첨부된 웹훅을 가져오는 중",
-      "SEARCH_404": "이 쿼리와 일치하는 항목이 없음",
-      "SIDEBAR_TXT": "<p><b>라벨</b></p><p>라벨은 대화를 분류하고 우선순위를 정하는 데 도움이 된다. 사이드패널에서 대화에 라벨을 할당할 수 있다.</p><p>라벨은 계정에 연결되며 조직에서 사용자 정의 워크플로우를 만드는 데 사용할 수 있다. 라벨에 사용자 정의 색상을 지정할 수 있으며, 라벨을 쉽게 식별할 수 있다. 사이드바에 라벨을 표시하여 대화를 쉽게 필터링할 수 있다.</p>",
+      "LOADING": "연결된 웹훅 가져오는 중",
+      "SEARCH_404": "이 쿼리와 일치하는 항목이 없습니다",
+      "SIDEBAR_TXT": "<p><b>웹훅</b> </p> <p>웹훅은 모든 계정에 대해 정의할 수 있는 HTTP 콜백입니다. Chatwoot에서 메시지 생성과 같은 이벤트에 의해 트리거됩니다. 이 계정에 대해 둘 이상의 웹훅을 만들 수 있습니다. <br /><br /> <b>웹훅</b>을 만들려면 <b>새 웹훅 추가</b> 버튼을 클릭하세요. 삭제 버튼을 클릭하여 기존 웹훅을 제거할 수도 있습니다.</p>",
       "LIST": {
-        "404": "이 계정에 구성된 웹훅이 없음.",
+        "404": "이 계정에 구성된 웹훅이 없습니다.",
         "TITLE": "웹훅 관리",
         "TABLE_HEADER": {
           "WEBHOOK_ENDPOINT": "웹훅 엔드포인트",
-          "ACTIONS": "액션"
+          "ACTIONS": "작업"
         }
       },
       "EDIT": {
         "BUTTON_TEXT": "수정",
-        "TITLE": "Edit webhook",
+        "TITLE": "웹훅 수정",
         "API": {
-          "SUCCESS_MESSAGE": "Webhook configuration updated successfully",
-          "ERROR_MESSAGE": "Woot 서버에 연결할 수 없음. 나중에 다시 시도하십시오."
+          "SUCCESS_MESSAGE": "웹훅 구성이 성공적으로 업데이트되었습니다",
+          "ERROR_MESSAGE": "Woot 서버에 연결할 수 없습니다. 나중에 다시 시도하세요"
         }
       },
       "ADD": {
         "CANCEL": "취소",
         "TITLE": "새 웹훅 추가",
         "API": {
-          "SUCCESS_MESSAGE": "Webhook configuration added successfully",
-          "ERROR_MESSAGE": "Woot 서버에 연결할 수 없음. 나중에 다시 시도하십시오."
+          "SUCCESS_MESSAGE": "웹훅 구성이 성공적으로 추가되었습니다",
+          "ERROR_MESSAGE": "Woot 서버에 연결할 수 없습니다. 나중에 다시 시도하세요"
         }
       },
       "DELETE": {
         "BUTTON_TEXT": "삭제",
         "API": {
-          "SUCCESS_MESSAGE": "웹훅이 성공적으로 삭제됨",
-          "ERROR_MESSAGE": "Woot 서버에 연결할 수 없음. 나중에 다시 시도하십시오."
+          "SUCCESS_MESSAGE": "웹훅이 성공적으로 삭제되었습니다",
+          "ERROR_MESSAGE": "Woot 서버에 연결할 수 없습니다. 나중에 다시 시도하세요"
         },
         "CONFIRM": {
           "TITLE": "삭제 확인",
-          "MESSAGE": "Are you sure to delete the webhook? ({webhookURL})",
-          "YES": "예, 삭제합니다. ",
-          "NO": "아니요, 유지합니다."
+          "MESSAGE": "웹훅을 삭제하시겠습니까? ({webhookURL})",
+          "YES": "예, 삭제합니다 ",
+          "NO": "아니요, 유지합니다"
         }
       }
     },
     "SLACK": {
       "DELETE": "삭제",
       "DELETE_CONFIRMATION": {
-        "TITLE": "Delete the integration",
-        "MESSAGE": "Are you sure you want to delete the integration? Doing so will result in the loss of access to conversations on your Slack workspace."
+        "TITLE": "연동 삭제",
+        "MESSAGE": "연동을 삭제하시겠습니까? 이렇게 하면 Slack 워크스페이스의 대화에 대한 액세스 권한이 손실됩니다."
       },
       "HELP_TEXT": {
-        "TITLE": "Using Slack Integration",
-        "BODY": "With this integration, all of your incoming conversations will be synced to the ***{selectedChannelName}*** channel in your Slack workspace. You can manage all your customer conversations right within the channel and never miss a message.\n\nHere are the main features of the integration:\n\n**Respond to conversations from within Slack:** To respond to a conversation in the ***{selectedChannelName}*** Slack channel, simply type out your message and send it as a thread. This will create a response back to the customer through Chatwoot. It's that simple!\n\n **Create private notes:** If you want to create private notes instead of replies, start your message with ***`note:`***. This ensures that your message is kept private and won't be visible to the customer.\n\n**Associate an agent profile:** If the person who replied on Slack has an agent profile in Chatwoot under the same email, the replies will be associated with that agent profile automatically. This means you can easily track who said what and when. On the other hand, when the replier doesn't have an associated agent profile, the replies will appear from the bot profile to the customer.",
-        "SELECTED": "selected"
+        "TITLE": "Slack 연동 사용 방법",
+        "BODY": "이 연동을 통해 모든 수신 대화는 Slack 워크스페이스의 ***{selectedChannelName}*** 채널과 동기화됩니다. 채널 내에서 모든 고객 대화를 관리하고 메시지를 놓치지 않을 수 있습니다.\n\n연동의 주요 기능은 다음과 같습니다:\n\n**Slack 내에서 대화 응답:** ***{selectedChannelName}*** Slack 채널의 대화에 응답하려면 메시지를 입력하고 스레드로 보내세요. 이렇게 하면 Chatwoot를 통해 고객에게 응답이 생성됩니다. 간단합니다!\n\n **비공개 메모 만들기:** 답장 대신 비공개 메모를 만들려면 메시지를 ***`note:`***로 시작하세요. 이렇게 하면 메시지가 비공개로 유지되고 고객에게 표시되지 않습니다.\n\n**상담원 프로필 연결:** Slack에서 답장한 사람이 동일한 이메일로 Chatwoot에 상담원 프로필이 있는 경우, 답장은 해당 상담원 프로필과 자동으로 연결됩니다. 즉, 누가 언제 무엇을 말했는지 쉽게 추적할 수 있습니다. 반면에 답장한 사람에게 연결된 상담원 프로필이 없는 경우, 답장은 봇 프로필에서 고객에게 표시됩니다.",
+        "SELECTED": "선택됨"
       },
       "SELECT_CHANNEL": {
-        "OPTION_LABEL": "Select a channel",
+        "OPTION_LABEL": "채널 선택",
         "UPDATE": "업데이트",
-        "BUTTON_TEXT": "Connect channel",
-        "DESCRIPTION": "Your Slack workspace is now linked with Chatwoot. However, the integration is currently inactive. To activate the integration and connect a channel to Chatwoot, please click the button below.\n\n**Note:** If you are attempting to connect a private channel, add the Chatwoot app to the Slack channel before proceeding with this step.",
-        "ATTENTION_REQUIRED": "Attention required",
-        "EXPIRED": "Your Slack integration has expired. To continue receiving messages on Slack, please delete the integration and connect your workspace again."
+        "BUTTON_TEXT": "채널 연결",
+        "DESCRIPTION": "Slack 워크스페이스가 이제 Chatwoot과 연결되었습니다. 그러나 연동은 현재 비활성 상태입니다. 연동을 활성화하고 채널을 Chatwoot에 연결하려면 아래 버튼을 클릭하세요.\n\n**참고:** 비공개 채널을 연결하려는 경우, 이 단계를 진행하기 전에 Chatwoot 앱을 Slack 채널에 추가하세요.",
+        "ATTENTION_REQUIRED": "주의 필요",
+        "EXPIRED": "Slack 연동이 만료되었습니다. Slack에서 메시지를 계속 받으려면 연동을 삭제하고 워크스페이스를 다시 연결하세요."
       },
-      "UPDATE_ERROR": "There was an error updating the integration, please try again",
-      "UPDATE_SUCCESS": "The channel is connected successfully",
-      "FAILED_TO_FETCH_CHANNELS": "There was an error fetching the channels from Slack, please try again"
+      "UPDATE_ERROR": "연동 업데이트 중 오류가 발생했습니다. 다시 시도하세요",
+      "UPDATE_SUCCESS": "채널이 성공적으로 연결되었습니다",
+      "FAILED_TO_FETCH_CHANNELS": "Slack에서 채널을 가져오는 중 오류가 발생했습니다. 다시 시도하세요"
     },
     "DYTE": {
-      "CLICK_HERE_TO_JOIN": "Click here to join",
-      "LEAVE_THE_ROOM": "Leave the room",
-      "START_VIDEO_CALL_HELP_TEXT": "Start a new video call with the customer",
-      "JOIN_ERROR": "There was an error joining the call, please try again",
-      "CREATE_ERROR": "There was an error creating a meeting link, please try again"
+      "CLICK_HERE_TO_JOIN": "참여하려면 여기를 클릭하세요",
+      "LEAVE_THE_ROOM": "회의실 나가기",
+      "START_VIDEO_CALL_HELP_TEXT": "고객과 새 화상 통화 시작",
+      "JOIN_ERROR": "통화 참여 중 오류가 발생했습니다. 다시 시도하세요",
+      "CREATE_ERROR": "회의 링크 생성 중 오류가 발생했습니다. 다시 시도하세요"
     },
     "OPEN_AI": {
-      "AI_ASSIST": "AI Assist",
-      "WITH_AI": " {option} with AI ",
+      "AI_ASSIST": "AI 지원",
+      "WITH_AI": "AI로 {option}",
       "OPTIONS": {
-        "REPLY_SUGGESTION": "Reply Suggestion",
-        "SUMMARIZE": "Summarize",
-        "REPHRASE": "Improve Writing",
-        "FIX_SPELLING_GRAMMAR": "Fix Spelling and Grammar",
-        "SHORTEN": "Shorten",
-        "EXPAND": "Expand",
-        "MAKE_FRIENDLY": "Change message tone to friendly",
-        "MAKE_FORMAL": "Use formal tone",
-        "SIMPLIFY": "Simplify"
+        "REPLY_SUGGESTION": "답변 제안",
+        "SUMMARIZE": "요약",
+        "REPHRASE": "글쓰기 개선",
+        "FIX_SPELLING_GRAMMAR": "맞춤법 및 문법 수정",
+        "SHORTEN": "줄이기",
+        "EXPAND": "늘리기",
+        "MAKE_FRIENDLY": "메시지 톤을 친근하게 변경",
+        "MAKE_FORMAL": "격식 있는 톤 사용",
+        "SIMPLIFY": "단순화"
       },
       "ASSISTANCE_MODAL": {
-        "DRAFT_TITLE": "Draft content",
-        "GENERATED_TITLE": "Generated content",
-        "AI_WRITING": "AI is writing",
+        "DRAFT_TITLE": "초안 내용",
+        "GENERATED_TITLE": "생성된 내용",
+        "AI_WRITING": "AI 작성 중",
         "BUTTONS": {
-          "APPLY": "Use this suggestion",
+          "APPLY": "이 제안 사용",
           "CANCEL": "취소"
         }
       },
       "CTA_MODAL": {
-        "TITLE": "Integrate with OpenAI",
-        "DESC": "Bring advanced AI features to your dashboard with OpenAI's GPT models. To begin, enter the API key from your OpenAI account.",
-        "KEY_PLACEHOLDER": "Enter your OpenAI API key",
+        "TITLE": "OpenAI와 연동",
+        "DESC": "OpenAI의 GPT 모델로 대시보드에 고급 AI 기능을 추가하세요. 시작하려면 OpenAI 계정의 API 키를 입력하세요.",
+        "KEY_PLACEHOLDER": "OpenAI API 키 입력",
         "BUTTONS": {
-          "NEED_HELP": "Need help?",
-          "DISMISS": "Dismiss",
-          "FINISH": "Finish Setup"
+          "NEED_HELP": "도움이 필요하신가요?",
+          "DISMISS": "닫기",
+          "FINISH": "설정 완료"
         },
-        "DISMISS_MESSAGE": "You can setup OpenAI integration later Whenever you want.",
-        "SUCCESS_MESSAGE": "OpenAI integration setup successfully"
+        "DISMISS_MESSAGE": "원할 때 언제든지 나중에 OpenAI 연동을 설정할 수 있습니다.",
+        "SUCCESS_MESSAGE": "OpenAI 연동 설정이 성공적으로 완료되었습니다"
       },
-      "TITLE": "Improve With AI",
-      "SUMMARY_TITLE": "Summary with AI",
-      "REPLY_TITLE": "Reply suggestion with AI",
-      "SUBTITLE": "An improved reply will be generated using AI, based on your current draft.",
+      "TITLE": "AI로 개선하기",
+      "SUMMARY_TITLE": "AI로 요약하기",
+      "REPLY_TITLE": "AI로 답변 제안 받기",
+      "SUBTITLE": "현재 초안을 기반으로 AI를 사용하여 개선된 답변이 생성됩니다.",
       "TONE": {
-        "TITLE": "Tone",
+        "TITLE": "톤",
         "OPTIONS": {
-          "PROFESSIONAL": "Professional",
-          "FRIENDLY": "Friendly"
+          "PROFESSIONAL": "전문적",
+          "FRIENDLY": "친근함"
         }
       },
       "BUTTONS": {
-        "GENERATE": "Generate",
-        "GENERATING": "Generating...",
+        "GENERATE": "생성",
+        "GENERATING": "생성 중...",
         "CANCEL": "취소"
       },
-      "GENERATE_ERROR": "There was an error processing the content, please try again"
+      "GENERATE_ERROR": "콘텐츠 처리 중 오류가 발생했습니다. OpenAI API 키를 확인하고 다시 시도하세요"
     },
     "DELETE": {
       "BUTTON_TEXT": "삭제",
       "API": {
-        "SUCCESS_MESSAGE": "통합이 성공적으로 삭제됨."
+        "SUCCESS_MESSAGE": "연동이 성공적으로 삭제되었습니다"
       }
     },
     "CONNECT": {
       "BUTTON_TEXT": "연결"
     },
     "DASHBOARD_APPS": {
-      "TITLE": "Dashboard Apps",
-      "HEADER_BTN_TXT": "Add a new dashboard app",
-      "SIDEBAR_TXT": "<p><b>Dashboard Apps</b></p><p>Dashboard Apps allow organizations to embed an application inside the Chatwoot dashboard to provide the context for customer support agents. This feature allows you to create an application independently and embed that inside the dashboard to provide user information, their orders, or their previous payment history.</p><p>When you embed your application using the dashboard in Chatwoot, your application will get the context of the conversation and contact as a window event. Implement a listener for the message event on your page to receive the context.</p><p>To add a new dashboard app, click on the button 'Add a new dashboard app'.</p>",
-      "DESCRIPTION": "Dashboard Apps allow organizations to embed an application inside the dashboard to provide the context for customer support agents. This feature allows you to create an application independently and embed that to provide user information, their orders, or their previous payment history.",
-      "LEARN_MORE": "Learn more about Dashboard Apps",
+      "TITLE": "대시보드 앱",
+      "HEADER_BTN_TXT": "새 대시보드 앱 추가",
+      "SIDEBAR_TXT": "<p><b>대시보드 앱</b></p><p>대시보드 앱을 사용하면 조직에서 Chatwoot 대시보드 내에 애플리케이션을 포함하여 고객 지원 상담원에게 컨텍스트를 제공할 수 있습니다. 이 기능을 사용하면 애플리케이션을 독립적으로 만들고 대시보드 내에 포함하여 사용자 정보, 주문 또는 이전 결제 내역을 제공할 수 있습니다.</p><p>Chatwoot의 대시보드를 사용하여 애플리케이션을 포함하면 애플리케이션은 창 이벤트로 대화 및 연락처의 컨텍스트를 받게 됩니다. 컨텍스트를 수신하려면 페이지에서 메시지 이벤트에 대한 리스너를 구현하세요.</p><p>새 대시보드 앱을 추가하려면 '새 대시보드 앱 추가' 버튼을 클릭하세요.</p>",
+      "DESCRIPTION": "대시보드 앱을 사용하면 조직에서 대시보드 내에 애플리케이션을 포함하여 고객 지원 상담원에게 컨텍스트를 제공할 수 있습니다. 이 기능을 사용하면 애플리케이션을 독립적으로 만들고 포함하여 사용자 정보, 주문 또는 이전 결제 내역을 제공할 수 있습니다.",
+      "LEARN_MORE": "대시보드 앱에 대해 자세히 알아보기",
       "LIST": {
-        "404": "There are no dashboard apps configured on this account yet",
-        "LOADING": "Fetching dashboard apps...",
-        "TABLE_HEADER": {
-          "NAME": "이름",
-          "ENDPOINT": "Endpoint"
-        },
-        "EDIT_TOOLTIP": "Edit app",
-        "DELETE_TOOLTIP": "Delete app"
+        "404": "이 계정에 아직 구성된 대시보드 앱이 없습니다",
+        "LOADING": "대시보드 앱 가져오는 중...",
+        "TABLE_HEADER": { "NAME": "이름", "ENDPOINT": "엔드포인트" },
+        "EDIT_TOOLTIP": "앱 수정",
+        "DELETE_TOOLTIP": "앱 삭제"
       },
       "FORM": {
         "TITLE_LABEL": "이름",
-        "TITLE_PLACEHOLDER": "Enter a name for your dashboard app",
-        "TITLE_ERROR": "A name for the dashboard app is required",
-        "URL_LABEL": "Endpoint",
-        "URL_PLACEHOLDER": "Enter the endpoint URL where your app is hosted",
-        "URL_ERROR": "A valid URL is required"
+        "TITLE_PLACEHOLDER": "대시보드 앱의 이름을 입력하세요",
+        "TITLE_ERROR": "대시보드 앱의 이름이 필요합니다",
+        "URL_LABEL": "엔드포인트",
+        "URL_PLACEHOLDER": "앱이 호스팅되는 엔드포인트 URL을 입력하세요",
+        "URL_ERROR": "유효한 URL이 필요합니다"
       },
       "CREATE": {
-        "HEADER": "Add a new dashboard app",
-        "FORM_SUBMIT": "보내기",
+        "HEADER": "새 대시보드 앱 추가",
+        "FORM_SUBMIT": "제출",
         "FORM_CANCEL": "취소",
-        "API_SUCCESS": "Dashboard app configured successfully",
-        "API_ERROR": "We couldn't create an app. Please try again later"
+        "API_SUCCESS": "대시보드 앱이 성공적으로 구성되었습니다",
+        "API_ERROR": "앱을 만들 수 없습니다. 나중에 다시 시도하세요"
       },
       "UPDATE": {
-        "HEADER": "Edit dashboard app",
+        "HEADER": "대시보드 앱 수정",
         "FORM_SUBMIT": "업데이트",
         "FORM_CANCEL": "취소",
-        "API_SUCCESS": "Dashboard app updated successfully",
-        "API_ERROR": "We couldn't update the app. Please try again later"
+        "API_SUCCESS": "대시보드 앱이 성공적으로 업데이트되었습니다",
+        "API_ERROR": "앱을 업데이트할 수 없습니다. 나중에 다시 시도하세요"
       },
       "DELETE": {
-        "CONFIRM_YES": "Yes, delete it",
-        "CONFIRM_NO": "No, keep it",
-        "TITLE": "Confirm deletion",
-        "MESSAGE": "Are you sure to delete the app - {appName}?",
-        "API_SUCCESS": "Dashboard app deleted successfully",
-        "API_ERROR": "We couldn't delete the app. Please try again later"
+        "CONFIRM_YES": "예, 삭제합니다",
+        "CONFIRM_NO": "아니요, 유지합니다",
+        "TITLE": "삭제 확인",
+        "MESSAGE": "앱 - {appName}을(를) 삭제하시겠습니까?",
+        "API_SUCCESS": "대시보드 앱이 성공적으로 삭제되었습니다",
+        "API_ERROR": "앱을 삭제할 수 없습니다. 나중에 다시 시도하세요"
       }
     },
     "LINEAR": {
-      "ADD_OR_LINK_BUTTON": "Create/Link Linear Issue",
-      "LOADING": "Fetching linear issues...",
-      "LOADING_ERROR": "There was an error fetching the linear issues, please try again",
-      "CREATE": "만들기",
+      "ADD_OR_LINK_BUTTON": "Linear 이슈 생성/연결",
+      "LOADING": "Linear 이슈 가져오는 중...",
+      "LOADING_ERROR": "Linear 이슈를 가져오는 중 오류가 발생했습니다. 다시 시도하세요",
+      "CREATE": "생성",
       "LINK": {
-        "SEARCH": "Search issues",
-        "SELECT": "Select issue",
-        "TITLE": "링크",
-        "EMPTY_LIST": "No linear issues found",
-        "LOADING": "Loading",
-        "ERROR": "There was an error fetching the linear issues, please try again",
-        "LINK_SUCCESS": "Issue linked successfully",
-        "LINK_ERROR": "There was an error linking the issue, please try again",
-        "LINK_TITLE": "Conversation (#{conversationId}) with {name}"
+        "SEARCH": "이슈 검색",
+        "SELECT": "이슈 선택",
+        "TITLE": "연결",
+        "EMPTY_LIST": "Linear 이슈를 찾을 수 없습니다",
+        "LOADING": "로딩 중",
+        "ERROR": "Linear 이슈를 가져오는 중 오류가 발생했습니다. 다시 시도하세요",
+        "LINK_SUCCESS": "이슈가 성공적으로 연결되었습니다",
+        "LINK_ERROR": "이슈 연결 중 오류가 발생했습니다. 다시 시도하세요",
+        "LINK_TITLE": "{name}과의 대화(#{conversationId})"
       },
       "ADD_OR_LINK": {
-        "TITLE": "Create/link linear issue",
-        "DESCRIPTION": "Create Linear issues from conversations, or link existing ones for seamless tracking.",
+        "TITLE": "Linear 이슈 생성/연결",
+        "DESCRIPTION": "대화에서 Linear 이슈를 생성하거나 기존 이슈를 연결하여 원활하게 추적하세요.",
         "FORM": {
           "TITLE": {
-            "LABEL": "Title",
-            "PLACEHOLDER": "Enter title",
-            "REQUIRED_ERROR": "Title is required"
+            "LABEL": "제목",
+            "PLACEHOLDER": "제목 입력",
+            "REQUIRED_ERROR": "제목은 필수입니다"
           },
           "DESCRIPTION": {
-            "LABEL": "내용",
-            "PLACEHOLDER": "Enter description"
+            "LABEL": "설명",
+            "PLACEHOLDER": "설명 입력"
           },
           "TEAM": {
-            "LABEL": "Team",
+            "LABEL": "팀",
             "PLACEHOLDER": "팀 선택",
-            "SEARCH": "Search team",
-            "REQUIRED_ERROR": "Team is required"
+            "SEARCH": "팀 검색",
+            "REQUIRED_ERROR": "팀은 필수입니다"
           },
           "ASSIGNEE": {
-            "LABEL": "Assignee",
-            "PLACEHOLDER": "Select assignee",
-            "SEARCH": "Search assignee"
+            "LABEL": "담당자",
+            "PLACEHOLDER": "담당자 선택",
+            "SEARCH": "담당자 검색"
           },
           "PRIORITY": {
-            "LABEL": "Priority",
-            "PLACEHOLDER": "Select priority",
-            "SEARCH": "Search priority"
+            "LABEL": "우선순위",
+            "PLACEHOLDER": "우선순위 선택",
+            "SEARCH": "우선순위 검색"
           },
           "LABEL": {
-            "LABEL": "Label",
-            "PLACEHOLDER": "Select label",
-            "SEARCH": "Search label"
+            "LABEL": "라벨",
+            "PLACEHOLDER": "라벨 선택",
+            "SEARCH": "라벨 검색"
           },
           "STATUS": {
             "LABEL": "상태",
-            "PLACEHOLDER": "Select status",
-            "SEARCH": "Search status"
+            "PLACEHOLDER": "상태 선택",
+            "SEARCH": "상태 검색"
           },
           "PROJECT": {
-            "LABEL": "Project",
-            "PLACEHOLDER": "Select project",
-            "SEARCH": "Search project"
+            "LABEL": "프로젝트",
+            "PLACEHOLDER": "프로젝트 선택",
+            "SEARCH": "프로젝트 검색"
           }
         },
-        "CREATE": "만들기",
+        "CREATE": "생성",
         "CANCEL": "취소",
-        "CREATE_SUCCESS": "Issue created successfully",
-        "CREATE_ERROR": "There was an error creating the issue, please try again",
-        "LOADING_TEAM_ERROR": "There was an error fetching the teams, please try again",
-        "LOADING_TEAM_ENTITIES_ERROR": "There was an error fetching the team entities, please try again"
+        "CREATE_SUCCESS": "이슈가 성공적으로 생성되었습니다",
+        "CREATE_ERROR": "이슈 생성 중 오류가 발생했습니다. 다시 시도하세요",
+        "LOADING_TEAM_ERROR": "팀을 가져오는 중 오류가 발생했습니다. 다시 시도하세요",
+        "LOADING_TEAM_ENTITIES_ERROR": "팀 엔티티를 가져오는 중 오류가 발생했습니다. 다시 시도하세요"
       },
       "ISSUE": {
         "STATUS": "상태",
-        "PRIORITY": "Priority",
-        "ASSIGNEE": "Assignee",
+        "PRIORITY": "우선순위",
+        "ASSIGNEE": "담당자",
         "LABELS": "라벨",
-        "CREATED_AT": "Created at {createdAt}"
+        "CREATED_AT": "{createdAt}에 생성됨"
       },
       "UNLINK": {
-        "TITLE": "Unlink",
-        "SUCCESS": "Issue unlinked successfully",
-        "ERROR": "There was an error unlinking the issue, please try again"
+        "TITLE": "연결 해제",
+        "SUCCESS": "이슈 연결이 성공적으로 해제되었습니다",
+        "ERROR": "이슈 연결 해제 중 오류가 발생했습니다. 다시 시도하세요"
       },
       "DELETE": {
-        "TITLE": "Are you sure you want to delete the integration?",
-        "MESSAGE": "Are you sure you want to delete the integration?",
-        "CONFIRM": "Yes, delete",
+        "TITLE": "연동을 삭제하시겠습니까?",
+        "MESSAGE": "연동을 삭제하시겠습니까?",
+        "CONFIRM": "예, 삭제합니다",
         "CANCEL": "취소"
       }
     }
   },
   "CAPTAIN": {
     "NAME": "Captain",
-    "HEADER_KNOW_MORE": "Know more",
+    "HEADER_KNOW_MORE": "더 알아보기",
     "COPILOT": {
       "SEND_MESSAGE": "메시지 보내기...",
-      "LOADER": "Captain is thinking",
-      "YOU": "나",
-      "USE": "Use this",
-      "RESET": "Reset",
-      "SELECT_ASSISTANT": "Select Assistant"
+      "EMPTY_MESSAGE": "응답 생성 중 오류가 발생했습니다. 다시 시도하세요.",
+      "LOADER": "Captain이 생각 중입니다",
+      "YOU": "사용자",
+      "USE": "이것 사용",
+      "RESET": "초기화",
+      "SELECT_ASSISTANT": "어시스턴트 선택"
     },
     "PAYWALL": {
-      "TITLE": "Upgrade to use Captain AI",
-      "AVAILABLE_ON": "Captain is not available on the free plan.",
-      "UPGRADE_PROMPT": "Upgrade your plan to get access to our assistants, copilot and more.",
-      "UPGRADE_NOW": "Upgrade now",
-      "CANCEL_ANYTIME": "You can change or cancel your plan anytime"
+      "TITLE": "Captain AI를 사용하려면 업그레이드하세요",
+      "AVAILABLE_ON": "Captain은 무료 플랜에서 사용할 수 없습니다.",
+      "UPGRADE_PROMPT": "어시스턴트, 코파일럿 등에 액세스하려면 플랜을 업그레이드하세요.",
+      "UPGRADE_NOW": "지금 업그레이드",
+      "CANCEL_ANYTIME": "언제든지 플랜을 변경하거나 취소할 수 있습니다"
     },
     "ENTERPRISE_PAYWALL": {
-      "AVAILABLE_ON": "Captain AI feature is only available in a paid plan.",
-      "UPGRADE_PROMPT": "Upgrade your plan to get access to our assistants, copilot and more.",
-      "ASK_ADMIN": "Please reach out to your administrator for the upgrade."
+      "AVAILABLE_ON": "Captain AI 기능은 유료 플랜에서만 사용할 수 있습니다.",
+      "UPGRADE_PROMPT": "어시스턴트, 코파일럿 등에 액세스하려면 플랜을 업그레이드하세요.",
+      "ASK_ADMIN": "업그레이드를 위해 관리자에게 문의하세요."
     },
     "BANNER": {
-      "RESPONSES": "You've used over 80% of your response limit. To continue using Captain AI, please upgrade.",
-      "DOCUMENTS": "Document limit reached. Upgrade to continue using Captain AI."
+      "RESPONSES": "응답 한도의 80% 이상을 사용했습니다. Captain AI를 계속 사용하려면 업그레이드하세요.",
+      "DOCUMENTS": "문서 한도에 도달했습니다. Captain AI를 계속 사용하려면 업그레이드하세요."
     },
     "FORM": {
       "CANCEL": "취소",
@@ -357,217 +355,217 @@
       "EDIT": "업데이트"
     },
     "ASSISTANTS": {
-      "HEADER": "Assistants",
-      "ADD_NEW": "Create a new assistant",
+      "HEADER": "어시스턴트",
+      "ADD_NEW": "새 어시스턴트 만들기",
       "DELETE": {
-        "TITLE": "Are you sure to delete the assistant?",
-        "DESCRIPTION": "This action is permanent. Deleting this assistant will remove it from all connected inboxes and permanently erase all generated knowledge.",
-        "CONFIRM": "Yes, delete",
-        "SUCCESS_MESSAGE": "The assistant has been successfully deleted",
-        "ERROR_MESSAGE": "There was an error deleting the assistant, please try again."
+        "TITLE": "어시스턴트를 삭제하시겠습니까?",
+        "DESCRIPTION": "이 작업은 영구적입니다. 이 어시스턴트를 삭제하면 연결된 모든 수신함에서 제거되고 생성된 모든 지식이 영구적으로 삭제됩니다.",
+        "CONFIRM": "예, 삭제합니다",
+        "SUCCESS_MESSAGE": "어시스턴트가 성공적으로 삭제되었습니다",
+        "ERROR_MESSAGE": "어시스턴트 삭제 중 오류가 발생했습니다. 다시 시도하세요."
       },
-      "FORM_DESCRIPTION": "Fill out the details below to name your assistant, describe its purpose, and specify the product it will support.",
+      "FORM_DESCRIPTION": "아래 세부 정보를 입력하여 어시스턴트의 이름을 지정하고, 목적을 설명하고, 지원할 제품을 지정하세요.",
       "CREATE": {
-        "TITLE": "Create an assistant",
-        "SUCCESS_MESSAGE": "The assistant has been successfully created",
-        "ERROR_MESSAGE": "There was an error creating the assistant, please try again."
+        "TITLE": "어시스턴트 만들기",
+        "SUCCESS_MESSAGE": "어시스턴트가 성공적으로 생성되었습니다",
+        "ERROR_MESSAGE": "어시스턴트 생성 중 오류가 발생했습니다. 다시 시도하세요."
       },
       "FORM": {
         "NAME": {
-          "LABEL": "Assistant Name",
-          "PLACEHOLDER": "Enter a name for the assistant",
-          "ERROR": "Please provide a name for the assistant"
+          "LABEL": "어시스턴트 이름",
+          "PLACEHOLDER": "어시스턴트 이름 입력",
+          "ERROR": "어시스턴트의 이름을 제공하세요"
         },
         "DESCRIPTION": {
-          "LABEL": "Assistant Description",
-          "PLACEHOLDER": "Describe how and where this assistant will be used",
-          "ERROR": "A description is required"
+          "LABEL": "어시스턴트 설명",
+          "PLACEHOLDER": "이 어시스턴트가 어떻게 그리고 어디서 사용될지 설명하세요",
+          "ERROR": "설명이 필요합니다"
         },
         "PRODUCT_NAME": {
-          "LABEL": "Product Name",
-          "PLACEHOLDER": "Enter the name of the product this assistant is designed for",
-          "ERROR": "The product name is required"
+          "LABEL": "제품 이름",
+          "PLACEHOLDER": "이 어시스턴트가 설계된 제품의 이름을 입력하세요",
+          "ERROR": "제품 이름이 필요합니다"
         },
         "FEATURES": {
-          "TITLE": "특징",
-          "ALLOW_CONVERSATION_FAQS": "Generate FAQs from resolved conversations",
-          "ALLOW_MEMORIES": "Capture key details as memories from customer interactions."
+          "TITLE": "기능",
+          "ALLOW_CONVERSATION_FAQS": "해결된 대화에서 FAQ 생성",
+          "ALLOW_MEMORIES": "고객 상호 작용에서 주요 세부 정보를 기억으로 캡처"
         }
       },
       "EDIT": {
-        "TITLE": "Update the assistant",
-        "SUCCESS_MESSAGE": "The assistant has been successfully updated",
-        "ERROR_MESSAGE": "There was an error updating the assistant, please try again."
+        "TITLE": "어시스턴트 업데이트",
+        "SUCCESS_MESSAGE": "어시스턴트가 성공적으로 업데이트되었습니다",
+        "ERROR_MESSAGE": "어시스턴트 업데이트 중 오류가 발생했습니다. 다시 시도하세요."
       },
       "OPTIONS": {
-        "EDIT_ASSISTANT": "Edit Assistant",
-        "DELETE_ASSISTANT": "Delete Assistant",
-        "VIEW_CONNECTED_INBOXES": "View connected inboxes"
+        "EDIT_ASSISTANT": "어시스턴트 수정",
+        "DELETE_ASSISTANT": "어시스턴트 삭제",
+        "VIEW_CONNECTED_INBOXES": "연결된 수신함 보기"
       },
       "EMPTY_STATE": {
-        "TITLE": "No assistants available",
-        "SUBTITLE": "Create an assistant to provide quick and accurate responses to your users. It can learn from your help articles and past conversations.",
+        "TITLE": "사용 가능한 어시스턴트 없음",
+        "SUBTITLE": "어시스턴트를 만들어 사용자에게 빠르고 정확한 응답을 제공하세요. 도움말 문서 및 과거 대화에서 학습할 수 있습니다.",
         "FEATURE_SPOTLIGHT": {
-          "TITLE": "Captain Assistant",
-          "NOTE": "Captain Assistant engages directly with customers, learns from your help docs and past conversations, and delivers instant, accurate responses. It handles the initial queries, providing quick resolutions before  transferring to an agent when needed."
+          "TITLE": "Captain 어시스턴트",
+          "NOTE": "Captain 어시스턴트는 고객과 직접 소통하고, 도움말 문서 및 과거 대화에서 학습하며, 즉각적이고 정확한 응답을 제공합니다. 초기 문의를 처리하여 빠른 해결을 제공하고, 필요한 경우 상담원에게 전달합니다."
         }
       }
     },
     "DOCUMENTS": {
-      "HEADER": "Documents",
-      "ADD_NEW": "Create a new document",
+      "HEADER": "문서",
+      "ADD_NEW": "새 문서 만들기",
       "RELATED_RESPONSES": {
-        "TITLE": "Related FAQs",
-        "DESCRIPTION": "These FAQs are generated directly from the document."
+        "TITLE": "관련 FAQ",
+        "DESCRIPTION": "이 FAQ는 문서에서 직접 생성됩니다."
       },
-      "FORM_DESCRIPTION": "Enter the URL of the document to add it as a knowledge source and choose the assistant to associate it with.",
+      "FORM_DESCRIPTION": "지식 소스로 추가할 문서의 URL을 입력하고 연결할 어시스턴트를 선택하세요.",
       "CREATE": {
-        "TITLE": "Add a document",
-        "SUCCESS_MESSAGE": "The document has been successfully created",
-        "ERROR_MESSAGE": "There was an error creating the document, please try again."
+        "TITLE": "문서 추가",
+        "SUCCESS_MESSAGE": "문서가 성공적으로 생성되었습니다",
+        "ERROR_MESSAGE": "문서 생성 중 오류가 발생했습니다. 다시 시도하세요."
       },
       "FORM": {
         "URL": {
           "LABEL": "URL",
-          "PLACEHOLDER": "Enter the URL of the document",
-          "ERROR": "Please provide a valid URL for the document"
+          "PLACEHOLDER": "문서 URL 입력",
+          "ERROR": "문서에 유효한 URL을 제공하세요"
         },
         "ASSISTANT": {
-          "LABEL": "Assistant",
-          "PLACEHOLDER": "Select the assistant",
-          "ERROR": "The assistant field is required"
+          "LABEL": "어시스턴트",
+          "PLACEHOLDER": "어시스턴트 선택",
+          "ERROR": "어시스턴트 필드는 필수입니다"
         }
       },
       "DELETE": {
-        "TITLE": "Are you sure to delete the document?",
-        "DESCRIPTION": "This action is permanent. Deleting this document will permanently erase all generated knowledge.",
-        "CONFIRM": "Yes, delete",
-        "SUCCESS_MESSAGE": "The document has been successfully deleted",
-        "ERROR_MESSAGE": "There was an error deleting the document, please try again."
+        "TITLE": "문서를 삭제하시겠습니까?",
+        "DESCRIPTION": "이 작업은 영구적입니다. 이 문서를 삭제하면 생성된 모든 지식이 영구적으로 삭제됩니다.",
+        "CONFIRM": "예, 삭제합니다",
+        "SUCCESS_MESSAGE": "문서가 성공적으로 삭제되었습니다",
+        "ERROR_MESSAGE": "문서 삭제 중 오류가 발생했습니다. 다시 시도하세요."
       },
       "OPTIONS": {
-        "VIEW_RELATED_RESPONSES": "View Related Responses",
-        "DELETE_DOCUMENT": "Delete Document"
+        "VIEW_RELATED_RESPONSES": "관련 응답 보기",
+        "DELETE_DOCUMENT": "문서 삭제"
       },
       "EMPTY_STATE": {
-        "TITLE": "No documents available",
-        "SUBTITLE": "Documents are used by your assistant to generate FAQs. You can import documents to provide context for your assistant.",
+        "TITLE": "사용 가능한 문서 없음",
+        "SUBTITLE": "문서는 어시스턴트가 FAQ를 생성하는 데 사용됩니다. 문서를 가져와 어시스턴트에 컨텍스트를 제공할 수 있습니다.",
         "FEATURE_SPOTLIGHT": {
-          "TITLE": "Captain Document",
-          "NOTE": "A document in Captain serves as a knowledge resource for the assistant. By connecting your help center or guides, Captain can analyze the content and provide accurate responses for customer inquiries."
+          "TITLE": "Captain 문서",
+          "NOTE": "Captain의 문서는 어시스턴트의 지식 리소스 역할을 합니다. 도움말 센터나 가이드를 연결하면 Captain이 콘텐츠를 분석하고 고객 문의에 대한 정확한 응답을 제공할 수 있습니다."
         }
       }
     },
     "RESPONSES": {
-      "HEADER": "FAQs",
-      "ADD_NEW": "Create new FAQ",
+      "HEADER": "FAQ",
+      "ADD_NEW": "새 FAQ 만들기",
       "DOCUMENTABLE": {
-        "CONVERSATION": "Conversation #{id}"
+        "CONVERSATION": "대화 #{id}"
       },
-      "SELECTED": "{count} selected",
-      "BULK_APPROVE_BUTTON": "Approve",
+      "SELECTED": "{count}개 선택됨",
+      "BULK_APPROVE_BUTTON": "승인",
       "BULK_DELETE_BUTTON": "삭제",
       "BULK_APPROVE": {
-        "SUCCESS_MESSAGE": "FAQs approved successfully",
-        "ERROR_MESSAGE": "There was an error approving the FAQs, please try again."
+        "SUCCESS_MESSAGE": "FAQ가 성공적으로 승인되었습니다",
+        "ERROR_MESSAGE": "FAQ 승인 중 오류가 발생했습니다. 다시 시도하세요."
       },
       "BULK_DELETE": {
-        "TITLE": "Delete FAQs?",
-        "DESCRIPTION": "Are you sure you want to delete the selected FAQs? This action cannot be undone.",
-        "CONFIRM": "Yes, delete all",
-        "SUCCESS_MESSAGE": "FAQs deleted successfully",
-        "ERROR_MESSAGE": "There was an error deleting the FAQs, please try again."
+        "TITLE": "FAQ를 삭제하시겠습니까?",
+        "DESCRIPTION": "선택한 FAQ를 삭제하시겠습니까? 이 작업은 취소할 수 없습니다.",
+        "CONFIRM": "예, 모두 삭제합니다",
+        "SUCCESS_MESSAGE": "FAQ가 성공적으로 삭제되었습니다",
+        "ERROR_MESSAGE": "FAQ 삭제 중 오류가 발생했습니다. 다시 시도하세요."
       },
       "DELETE": {
-        "TITLE": "Are you sure to delete the FAQ?",
+        "TITLE": "FAQ를 삭제하시겠습니까?",
         "DESCRIPTION": "",
-        "CONFIRM": "Yes, delete",
-        "SUCCESS_MESSAGE": "FAQ deleted successfully",
-        "ERROR_MESSAGE": "There was an error deleting the FAQ, please try again."
+        "CONFIRM": "예, 삭제합니다",
+        "SUCCESS_MESSAGE": "FAQ가 성공적으로 삭제되었습니다",
+        "ERROR_MESSAGE": "FAQ 삭제 중 오류가 발생했습니다. 다시 시도하세요."
       },
       "FILTER": {
-        "ASSISTANT": "Assistant: {selected}",
-        "STATUS": "Status: {selected}",
-        "ALL_ASSISTANTS": "모두"
+        "ASSISTANT": "어시스턴트: {selected}",
+        "STATUS": "상태: {selected}",
+        "ALL_ASSISTANTS": "전체"
       },
       "STATUS": {
         "TITLE": "상태",
-        "PENDING": "보내는 중",
-        "APPROVED": "Approved",
-        "ALL": "모두"
+        "PENDING": "대기 중",
+        "APPROVED": "승인됨",
+        "ALL": "전체"
       },
-      "FORM_DESCRIPTION": "Add a question and its corresponding answer to the knowledge base and select the assistant it should be associated with.",
+      "FORM_DESCRIPTION": "지식 베이스에 질문과 해당 답변을 추가하고 연결할 어시스턴트를 선택하세요.",
       "CREATE": {
-        "TITLE": "Add an FAQ",
-        "SUCCESS_MESSAGE": "The response has been added successfully.",
-        "ERROR_MESSAGE": "An error occurred while adding the response. Please try again."
+        "TITLE": "FAQ 추가",
+        "SUCCESS_MESSAGE": "응답이 성공적으로 추가되었습니다.",
+        "ERROR_MESSAGE": "응답 추가 중 오류가 발생했습니다. 다시 시도하세요."
       },
       "FORM": {
         "QUESTION": {
-          "LABEL": "Question",
-          "PLACEHOLDER": "Enter the question here",
-          "ERROR": "Please provide a valid question."
+          "LABEL": "질문",
+          "PLACEHOLDER": "여기에 질문 입력",
+          "ERROR": "유효한 질문을 제공하세요."
         },
         "ANSWER": {
-          "LABEL": "Answer",
-          "PLACEHOLDER": "Enter the answer here",
-          "ERROR": "Please provide a valid answer."
+          "LABEL": "답변",
+          "PLACEHOLDER": "여기에 답변 입력",
+          "ERROR": "유효한 답변을 제공하세요."
         },
         "ASSISTANT": {
-          "LABEL": "Assistant",
-          "PLACEHOLDER": "Select an assistant",
-          "ERROR": "Please select an assistant."
+          "LABEL": "어시스턴트",
+          "PLACEHOLDER": "어시스턴트 선택",
+          "ERROR": "어시스턴트를 선택하세요."
         }
       },
       "EDIT": {
-        "TITLE": "Update the FAQ",
-        "SUCCESS_MESSAGE": "The FAQ has been successfully updated",
-        "ERROR_MESSAGE": "There was an error updating the FAQ, please try again",
-        "APPROVE_SUCCESS_MESSAGE": "The FAQ was marked as approved"
+        "TITLE": "FAQ 업데이트",
+        "SUCCESS_MESSAGE": "FAQ가 성공적으로 업데이트되었습니다",
+        "ERROR_MESSAGE": "FAQ 업데이트 중 오류가 발생했습니다. 다시 시도하세요",
+        "APPROVE_SUCCESS_MESSAGE": "FAQ가 승인됨으로 표시되었습니다"
       },
       "OPTIONS": {
-        "APPROVE": "Mark as approved",
-        "EDIT_RESPONSE": "Edit FAQ",
-        "DELETE_RESPONSE": "Delete FAQ"
+        "APPROVE": "승인됨으로 표시",
+        "EDIT_RESPONSE": "FAQ 수정",
+        "DELETE_RESPONSE": "FAQ 삭제"
       },
       "EMPTY_STATE": {
-        "TITLE": "No FAQs Found",
-        "SUBTITLE": "FAQs help your assistant provide quick and accurate answers to questions from your customers. They can be generated automatically from your content or can be added manually.",
+        "TITLE": "FAQ를 찾을 수 없음",
+        "SUBTITLE": "FAQ는 어시스턴트가 고객의 질문에 빠르고 정확한 답변을 제공하는 데 도움이 됩니다. 콘텐츠에서 자동으로 생성하거나 수동으로 추가할 수 있습니다.",
         "FEATURE_SPOTLIGHT": {
           "TITLE": "Captain FAQ",
-          "NOTE": "Captain FAQs detects common customer questions—whether missing from your knowledge base or frequently asked—and generates relevant FAQs to improve support. You can review each suggestion and decide whether to approve or reject it."
+          "NOTE": "Captain FAQ는 지식 베이스에 없거나 자주 묻는 일반적인 고객 질문을 감지하고 관련 FAQ를 생성하여 지원을 개선합니다. 각 제안을 검토하고 승인 또는 거부 여부를 결정할 수 있습니다."
         }
       }
     },
     "INBOXES": {
-      "HEADER": "Connected Inboxes",
-      "ADD_NEW": "Connect a new inbox",
+      "HEADER": "연결된 수신함",
+      "ADD_NEW": "새 수신함 연결",
       "OPTIONS": {
-        "DISCONNECT": "Disconnect"
+        "DISCONNECT": "연결 해제"
       },
       "DELETE": {
-        "TITLE": "Are you sure to disconnect the inbox?",
+        "TITLE": "수신함 연결을 해제하시겠습니까?",
         "DESCRIPTION": "",
-        "CONFIRM": "Yes, delete",
-        "SUCCESS_MESSAGE": "The inbox was successfully disconnected.",
-        "ERROR_MESSAGE": "There was an error disconnecting the inbox, please try again."
+        "CONFIRM": "예, 삭제합니다",
+        "SUCCESS_MESSAGE": "수신함 연결이 성공적으로 해제되었습니다.",
+        "ERROR_MESSAGE": "수신함 연결 해제 중 오류가 발생했습니다. 다시 시도하세요."
       },
-      "FORM_DESCRIPTION": "Choose an inbox to connect with the assistant.",
+      "FORM_DESCRIPTION": "어시스턴트와 연결할 수신함을 선택하세요.",
       "CREATE": {
-        "TITLE": "Connect an Inbox",
-        "SUCCESS_MESSAGE": "The inbox was successfully connected.",
-        "ERROR_MESSAGE": "An error occurred while connecting the inbox. Please try again."
+        "TITLE": "수신함 연결",
+        "SUCCESS_MESSAGE": "수신함이 성공적으로 연결되었습니다.",
+        "ERROR_MESSAGE": "수신함 연결 중 오류가 발생했습니다. 다시 시도하세요."
       },
       "FORM": {
         "INBOX": {
-          "LABEL": "받은 메시지함",
-          "PLACEHOLDER": "Choose the inbox to deploy the assistant.",
-          "ERROR": "An inbox selection is required."
+          "LABEL": "수신함",
+          "PLACEHOLDER": "어시스턴트를 배포할 수신함을 선택하세요.",
+          "ERROR": "수신함 선택이 필요합니다."
         }
       },
       "EMPTY_STATE": {
-        "TITLE": "No Connected Inboxes",
-        "SUBTITLE": "Connecting an inbox allows the assistant to handle initial questions from your customers before transferring them to you."
+        "TITLE": "연결된 수신함 없음",
+        "SUBTITLE": "수신함을 연결하면 어시스턴트가 고객의 초기 질문을 처리한 후 사용자에게 전달할 수 있습니다."
       }
     }
   }

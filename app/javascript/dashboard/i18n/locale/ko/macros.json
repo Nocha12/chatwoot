@@ -1,88 +1,104 @@
 {
   "MACROS": {
-    "HEADER": "Macros",
-    "DESCRIPTION": "A macro is a set of saved actions that help customer service agents easily complete tasks. The agents can define a set of actions like tagging a conversation with a label, sending an email transcript, updating a custom attribute, etc., and they can run these actions in a single click.",
-    "LEARN_MORE": "Learn more about macros",
-    "HEADER_BTN_TXT": "Add a new macro",
-    "HEADER_BTN_TXT_SAVE": "Save macro",
-    "LOADING": "Fetching macros",
-    "ERROR": "Something went wrong. Please try again",
-    "ORDER_INFO": "Macros will run in the order you add your actions. You can rearrange them by dragging them by the handle beside each node.",
+    "HEADER": "매크로",
+    "DESCRIPTION": "매크로는 고객 서비스 상담원이 작업을 쉽게 완료하는 데 도움이 되는 저장된 작업 세트입니다. 상담원은 대화에 라벨 태그 지정, 이메일 내용 전송, 사용자 지정 속성 업데이트 등과 같은 작업 세트를 정의하고 클릭 한 번으로 이러한 작업을 실행할 수 있습니다.",
+    "LEARN_MORE": "매크로에 대해 자세히 알아보기",
+    "HEADER_BTN_TXT": "새 매크로 추가",
+    "HEADER_BTN_TXT_SAVE": "매크로 저장",
+    "LOADING": "매크로 가져오는 중",
+    "ERROR": "문제가 발생했습니다. 다시 시도하세요",
+    "ORDER_INFO": "매크로는 작업을 추가한 순서대로 실행됩니다. 각 노드 옆의 핸들을 드래그하여 순서를 변경할 수 있습니다.",
     "ADD": {
       "FORM": {
         "NAME": {
-          "LABEL": "Macro name",
-          "PLACEHOLDER": "Enter a name for your macro",
-          "ERROR": "Name is required for creating a macro"
+          "LABEL": "매크로 이름",
+          "PLACEHOLDER": "매크로 이름 입력",
+          "ERROR": "매크로를 만들려면 이름이 필요합니다"
         },
         "ACTIONS": {
-          "LABEL": "액션"
+          "LABEL": "작업"
         }
       },
       "API": {
-        "SUCCESS_MESSAGE": "Macro added successfully",
-        "ERROR_MESSAGE": "Unable to create macro, Please try again later"
+        "SUCCESS_MESSAGE": "매크로가 성공적으로 추가되었습니다",
+        "ERROR_MESSAGE": "매크로를 만들 수 없습니다. 나중에 다시 시도하세요"
       }
     },
     "LIST": {
       "TABLE_HEADER": {
         "NAME": "이름",
-        "CREATED BY": "Created by",
-        "LAST_UPDATED_BY": "Last updated by",
-        "VISIBILITY": "Visibility"
+        "CREATED BY": "만든 사람",
+        "LAST_UPDATED_BY": "마지막 업데이트한 사람",
+        "VISIBILITY": "공개 범위"
       },
-      "404": "No macros found"
+      "404": "매크로를 찾을 수 없습니다"
     },
     "DELETE": {
-      "TOOLTIP": "Delete macro",
+      "TOOLTIP": "매크로 삭제",
       "CONFIRM": {
-        "MESSAGE": "삭제하시겠습니까? ",
-        "YES": "Yes, Delete",
-        "NO": "아니오"
+        "MESSAGE": "정말로 삭제하시겠습니까? ",
+        "YES": "예, 삭제합니다",
+        "NO": "아니요"
       },
       "API": {
-        "SUCCESS_MESSAGE": "Macro deleted successfully",
-        "ERROR_MESSAGE": "There was an error deleting the macro. Please try again later"
+        "SUCCESS_MESSAGE": "매크로가 성공적으로 삭제되었습니다",
+        "ERROR_MESSAGE": "매크로 삭제 중 오류가 발생했습니다. 나중에 다시 시도하세요"
       }
     },
     "EDIT": {
-      "TOOLTIP": "Edit macro",
+      "TOOLTIP": "매크로 수정",
       "API": {
-        "SUCCESS_MESSAGE": "Macro updated successfully",
-        "ERROR_MESSAGE": "Could not update Macro, Please try again later"
+        "SUCCESS_MESSAGE": "매크로가 성공적으로 업데이트되었습니다",
+        "ERROR_MESSAGE": "매크로를 업데이트할 수 없습니다. 나중에 다시 시도하세요"
       }
     },
     "EDITOR": {
-      "START_FLOW": "Start Flow",
-      "END_FLOW": "End Flow",
-      "LOADING": "Fetching macro",
-      "ADD_BTN_TOOLTIP": "Add new action",
-      "DELETE_BTN_TOOLTIP": "Delete Action",
+      "START_FLOW": "플로우 시작",
+      "END_FLOW": "플로우 종료",
+      "LOADING": "매크로 가져오는 중",
+      "ADD_BTN_TOOLTIP": "새 작업 추가",
+      "DELETE_BTN_TOOLTIP": "작업 삭제",
       "VISIBILITY": {
-        "LABEL": "Macro Visibility",
+        "LABEL": "매크로 공개 범위",
         "GLOBAL": {
-          "LABEL": "Public",
-          "DESCRIPTION": "This macro is available publicly for all agents in this account."
+          "LABEL": "공개",
+          "DESCRIPTION": "이 매크로는 이 계정의 모든 상담원에게 공개적으로 사용할 수 있습니다."
         },
         "PERSONAL": {
-          "LABEL": "Private",
-          "DESCRIPTION": "This macro will be private to you and not be available to others."
+          "LABEL": "비공개",
+          "DESCRIPTION": "이 매크로는 사용자에게 비공개이며 다른 사람은 사용할 수 없습니다."
         }
       }
     },
     "EXECUTE": {
-      "BUTTON_TOOLTIP": "Execute",
-      "PREVIEW": "Preview Macro",
-      "EXECUTED_SUCCESSFULLY": "Macro executed successfully"
+      "BUTTON_TOOLTIP": "실행",
+      "PREVIEW": "매크로 미리보기",
+      "EXECUTED_SUCCESSFULLY": "매크로가 성공적으로 실행되었습니다"
     },
     "ERRORS": {
-      "ATTRIBUTE_KEY_REQUIRED": "Attribute key is required",
-      "FILTER_OPERATOR_REQUIRED": "Filter operator is required",
-      "VALUE_REQUIRED": "값이 필요합니다.",
-      "VALUE_MUST_BE_BETWEEN_1_AND_998": "Value must be between 1 and 998",
-      "ACTION_PARAMETERS_REQUIRED": "Action parameters are required",
-      "ATLEAST_ONE_CONDITION_REQUIRED": "At least one condition is required",
-      "ATLEAST_ONE_ACTION_REQUIRED": "At least one action is required"
+      "ATTRIBUTE_KEY_REQUIRED": "속성 키는 필수입니다",
+      "FILTER_OPERATOR_REQUIRED": "필터 연산자는 필수입니다",
+      "VALUE_REQUIRED": "값은 필수입니다",
+      "VALUE_MUST_BE_BETWEEN_1_AND_998": "값은 1에서 998 사이여야 합니다",
+      "ACTION_PARAMETERS_REQUIRED": "작업 매개변수는 필수입니다",
+      "ATLEAST_ONE_CONDITION_REQUIRED": "최소 하나 이상의 조건이 필요합니다",
+      "ATLEAST_ONE_ACTION_REQUIRED": "최소 하나 이상의 작업이 필요합니다"
+    },
+    "ACTIONS": {
+      "ASSIGN_TEAM": "팀 할당",
+      "ASSIGN_AGENT": "상담원 할당",
+      "ADD_LABEL": "라벨 추가",
+      "REMOVE_LABEL": "라벨 제거",
+      "REMOVE_ASSIGNED_TEAM": "할당된 팀 제거",
+      "SEND_EMAIL_TRANSCRIPT": "이메일 내용 전송",
+      "MUTE_CONVERSATION": "대화 음소거",
+      "SNOOZE_CONVERSATION": "대화 다시 알림",
+      "RESOLVE_CONVERSATION": "대화 해결",
+      "SEND_ATTACHMENT": "첨부 파일 보내기",
+      "SEND_MESSAGE": "메시지 보내기",
+      "CHANGE_PRIORITY": "우선 순위 변경",
+      "ADD_PRIVATE_NOTE": "비공개 메모 추가",
+      "SEND_WEBHOOK_EVENT": "웹훅 이벤트 보내기"
     }
   }
 }

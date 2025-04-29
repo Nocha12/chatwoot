@@ -1,121 +1,121 @@
 {
   "ATTRIBUTES_MGMT": {
-    "HEADER": "사용자 지정 특성",
-    "HEADER_BTN_TXT": "사용자 지정 속성 추가하기",
-    "LOADING": "사용자 지정 속성들 가져오기",
-    "DESCRIPTION": "A custom attribute tracks additional details about your contacts or conversations—such as the subscription plan or the date of their first purchase. You can add different types of custom attributes, such as text, lists, or numbers, to capture the specific information you need.",
-    "LEARN_MORE": "Learn more about custom attributes",
+    "HEADER": "사용자 정의 속성",
+    "HEADER_BTN_TXT": "사용자 정의 속성 추가",
+    "LOADING": "사용자 정의 속성 불러오는 중",
+    "DESCRIPTION": "사용자 정의 속성은 구독 플랜이나 첫 구매 날짜와 같이 연락처 또는 대화에 대한 추가 세부 정보를 추적합니다. 텍스트, 목록 또는 숫자와 같은 다양한 유형의 사용자 정의 속성을 추가하여 필요한 특정 정보를 캡처할 수 있습니다.",
+    "LEARN_MORE": "사용자 정의 속성에 대해 자세히 알아보기",
     "ADD": {
-      "TITLE": "사용자 지정 속성 추가하기",
-      "SUBMIT": "만들기",
+      "TITLE": "사용자 정의 속성 추가",
+      "SUBMIT": "생성",
       "CANCEL_BUTTON_TEXT": "취소",
       "FORM": {
         "NAME": {
-          "LABEL": "표시명",
-          "PLACEHOLDER": "사용자 지정 속성 표기명 작성하기",
-          "ERROR": "이름이 필요합니다"
+          "LABEL": "표시 이름",
+          "PLACEHOLDER": "사용자 정의 속성 표시 이름 입력",
+          "ERROR": "이름은 필수입니다"
         },
         "DESC": {
-          "LABEL": "내용",
-          "PLACEHOLDER": "사용자 지정 속성 설명 작성하기",
-          "ERROR": "설명이 필요합니다"
+          "LABEL": "설명",
+          "PLACEHOLDER": "사용자 정의 속성 설명 입력",
+          "ERROR": "설명은 필수입니다"
         },
         "MODEL": {
-          "LABEL": "Applies to",
-          "PLACEHOLDER": "Please select one",
-          "ERROR": "Model is required"
+          "LABEL": "적용 대상",
+          "PLACEHOLDER": "하나를 선택하세요",
+          "ERROR": "모델은 필수입니다"
         },
         "TYPE": {
-          "LABEL": "Type",
-          "PLACEHOLDER": "Please select a type",
-          "ERROR": "Type is required",
+          "LABEL": "유형",
+          "PLACEHOLDER": "유형을 선택하세요",
+          "ERROR": "유형은 필수입니다",
           "LIST": {
-            "LABEL": "List Values",
-            "PLACEHOLDER": "Please enter value and press enter key",
-            "ERROR": "Must have at least one value"
+            "LABEL": "목록 값",
+            "PLACEHOLDER": "값을 입력하고 Enter 키를 누르세요",
+            "ERROR": "값이 최소 하나 필요합니다"
           }
         },
         "KEY": {
-          "LABEL": "Key",
-          "PLACEHOLDER": "Enter custom attribute key",
-          "ERROR": "Key is required",
-          "IN_VALID": "Invalid key"
+          "LABEL": "키",
+          "PLACEHOLDER": "사용자 정의 속성 키 입력",
+          "ERROR": "키는 필수입니다",
+          "IN_VALID": "잘못된 키"
         },
         "REGEX_PATTERN": {
-          "LABEL": "Regex Pattern",
-          "PLACEHOLDER": "Please enter custom attribute regex pattern. (Optional)"
+          "LABEL": "정규식 패턴",
+          "PLACEHOLDER": "사용자 정의 속성 정규식 패턴 입력(선택 사항)"
         },
         "REGEX_CUE": {
-          "LABEL": "Regex Cue",
-          "PLACEHOLDER": "Please enter regex pattern hint. (Optional)"
+          "LABEL": "정규식 힌트",
+          "PLACEHOLDER": "정규식 패턴 힌트 입력(선택 사항)"
         },
         "ENABLE_REGEX": {
-          "LABEL": "Enable regex validation"
+          "LABEL": "정규식 검증 활성화"
         }
       },
       "API": {
-        "SUCCESS_MESSAGE": "Custom Attribute added successfully!",
-        "ERROR_MESSAGE": "Could not create a Custom Attribute. Please try again later."
+        "SUCCESS_MESSAGE": "사용자 정의 속성이 성공적으로 추가되었습니다!",
+        "ERROR_MESSAGE": "사용자 정의 속성을 생성할 수 없습니다. 나중에 다시 시도하세요."
       }
     },
     "DELETE": {
       "BUTTON_TEXT": "삭제",
       "API": {
-        "SUCCESS_MESSAGE": "Custom Attribute deleted successfully.",
-        "ERROR_MESSAGE": "Couldn't delete the custom attribute. Try again."
+        "SUCCESS_MESSAGE": "사용자 정의 속성이 성공적으로 삭제되었습니다.",
+        "ERROR_MESSAGE": "사용자 정의 속성을 삭제할 수 없습니다. 다시 시도하세요."
       },
       "CONFIRM": {
-        "TITLE": "{attributeName}팀을 삭제하시겠습니까?",
-        "PLACE_HOLDER": "Please type {attributeName} to confirm",
-        "MESSAGE": "Deleting will remove the custom attribute",
-        "YES": "삭제 ",
+        "TITLE": "{attributeName}을(를) 삭제하시겠습니까?",
+        "PLACE_HOLDER": "확인을 위해 {attributeName}을(를) 입력하세요",
+        "MESSAGE": "삭제하면 사용자 정의 속성이 제거됩니다",
+        "YES": "삭제",
         "NO": "취소"
       }
     },
     "EDIT": {
-      "TITLE": "Edit Custom Attribute",
+      "TITLE": "사용자 정의 속성 편집",
       "UPDATE_BUTTON_TEXT": "업데이트",
       "TYPE": {
         "LIST": {
-          "LABEL": "List Values",
-          "PLACEHOLDER": "Please enter values and press enter key"
+          "LABEL": "목록 값",
+          "PLACEHOLDER": "값을 입력하고 Enter 키를 누르세요"
         }
       },
       "API": {
-        "SUCCESS_MESSAGE": "Custom Attribute updated successfully",
-        "ERROR_MESSAGE": "There was an error updating custom attribute, please try again"
+        "SUCCESS_MESSAGE": "사용자 정의 속성이 성공적으로 업데이트되었습니다",
+        "ERROR_MESSAGE": "사용자 정의 속성 업데이트 중 오류가 발생했습니다. 다시 시도하세요."
       }
     },
     "TABS": {
-      "HEADER": "사용자 지정 특성",
-      "CONVERSATION": "Conversation",
-      "CONTACT": "Contact"
+      "HEADER": "사용자 정의 속성",
+      "CONVERSATION": "대화",
+      "CONTACT": "연락처"
     },
     "LIST": {
       "TABLE_HEADER": {
         "NAME": "이름",
-        "DESCRIPTION": "내용",
-        "TYPE": "Type",
-        "KEY": "Key"
+        "DESCRIPTION": "설명",
+        "TYPE": "유형",
+        "KEY": "키"
       },
       "BUTTONS": {
-        "EDIT": "수정",
+        "EDIT": "편집",
         "DELETE": "삭제"
       },
       "EMPTY_RESULT": {
-        "404": "There are no custom attributes created",
-        "NOT_FOUND": "There are no custom attributes configured"
+        "404": "생성된 사용자 정의 속성이 없습니다",
+        "NOT_FOUND": "구성된 사용자 정의 속성이 없습니다"
       },
       "REGEX_PATTERN": {
-        "LABEL": "Regex Pattern",
-        "PLACEHOLDER": "Please enter custom attribute regex pattern. (Optional)"
+        "LABEL": "정규식 패턴",
+        "PLACEHOLDER": "사용자 정의 속성 정규식 패턴 입력(선택 사항)"
       },
       "REGEX_CUE": {
-        "LABEL": "Regex Cue",
-        "PLACEHOLDER": "Please enter regex pattern hint. (Optional)"
+        "LABEL": "정규식 힌트",
+        "PLACEHOLDER": "정규식 패턴 힌트 입력(선택 사항)"
       },
       "ENABLE_REGEX": {
-        "LABEL": "Enable regex validation"
+        "LABEL": "정규식 검증 활성화"
       }
     }
   }

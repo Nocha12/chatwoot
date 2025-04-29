@@ -1,568 +1,496 @@
 {
   "REPORT": {
-    "HEADER": "대화",
-    "LOADING_CHART": "차트 데이터 불러오는 중...",
-    "NO_ENOUGH_DATA": "보고서를 생성할 수 있는 데이터 포인트가 부족합니다. 나중에 다시 시도하십시오.",
-    "DOWNLOAD_AGENT_REPORTS": "다운로드 에이전트 보고서",
-    "DATA_FETCHING_FAILED": "Failed to fetch data, please try again later.",
-    "SUMMARY_FETCHING_FAILED": "Failed to fetch summary, please try again later.",
+    "HEADER": "대화 보고서",
+    "LOADING_CHART": "차트 데이터 로드 중…",
+    "NO_ENOUGH_DATA": "보고서를 생성하기에 충분한 데이터가 없습니다. 나중에 다시 시도하세요.",
+    "DOWNLOAD_AGENT_REPORTS": "에이전트 보고서 다운로드",
+    "DATA_FETCHING_FAILED": "데이터를 가져오지 못했습니다. 나중에 다시 시도하세요.",
+    "SUMMARY_FETCHING_FAILED": "요약 정보를 가져오지 못했습니다. 나중에 다시 시도하세요.",
     "METRICS": {
       "CONVERSATIONS": {
-        "NAME": "대화",
-        "DESC": "( 총 )"
+        "NAME": "대화 수",
+        "DESC": "(총)"
       },
       "INCOMING_MESSAGES": {
         "NAME": "수신 메시지",
-        "DESC": "( 총 )"
+        "DESC": "(총)"
       },
       "OUTGOING_MESSAGES": {
         "NAME": "발신 메시지",
-        "DESC": "( 총 )"
+        "DESC": "(총)"
       },
       "FIRST_RESPONSE_TIME": {
-        "NAME": "First Response Time",
-        "DESC": "( 평균 )",
-        "INFO_TEXT": "Total number of conversations used for computation:",
-        "TOOLTIP_TEXT": "First Response Time is {metricValue} (based on {conversationCount} conversations)"
+        "NAME": "첫 응답 시간",
+        "DESC": "(평균)",
+        "INFO_TEXT": "계산에 사용된 대화 수:",
+        "TOOLTIP_TEXT": "첫 응답 시간은 {conversationCount}개의 대화를 기준으로 평균 {metricValue}입니다"
       },
       "RESOLUTION_TIME": {
         "NAME": "해결 시간",
-        "DESC": "( 평균 )",
-        "INFO_TEXT": "Total number of conversations used for computation:",
-        "TOOLTIP_TEXT": "Resolution Time is {metricValue} (based on {conversationCount} conversations)"
+        "DESC": "(평균)",
+        "INFO_TEXT": "계산에 사용된 대화 수:",
+        "TOOLTIP_TEXT": "해결 시간은 {conversationCount}개의 대화를 기준으로 평균 {metricValue}입니다"
       },
       "RESOLUTION_COUNT": {
-        "NAME": "해결 수",
-        "DESC": "( 총 )"
+        "NAME": "해결 건수",
+        "DESC": "(총)"
       },
       "BOT_RESOLUTION_COUNT": {
-        "NAME": "해결 수",
-        "DESC": "( 총 )"
+        "NAME": "봇 해결 건수",
+        "DESC": "(총)"
       },
       "BOT_HANDOFF_COUNT": {
-        "NAME": "Handoff Count",
-        "DESC": "( 총 )"
+        "NAME": "봇 이관 건수",
+        "DESC": "(총)"
       },
       "REPLY_TIME": {
-        "NAME": "Customer waiting time",
-        "TOOLTIP_TEXT": "Waiting time is {metricValue} (based on {conversationCount} replies)",
+        "NAME": "고객 대기 시간",
+        "TOOLTIP_TEXT": "{conversationCount}개의 답변을 기준으로 대기 시간은 {metricValue}입니다",
         "DESC": ""
       }
     },
     "DATE_RANGE_OPTIONS": {
       "LAST_7_DAYS": "지난 7일",
       "LAST_30_DAYS": "지난 30일",
-      "LAST_3_MONTHS": "Last 3 months",
-      "LAST_6_MONTHS": "Last 6 months",
-      "LAST_YEAR": "Last year",
-      "CUSTOM_DATE_RANGE": "Custom date range"
+      "LAST_3_MONTHS": "지난 3개월",
+      "LAST_6_MONTHS": "지난 6개월",
+      "LAST_YEAR": "지난 1년",
+      "CUSTOM_DATE_RANGE": "사용자 지정 기간"
     },
     "CUSTOM_DATE_RANGE": {
-      "CONFIRM": "Apply",
-      "PLACEHOLDER": "Select date range"
+      "CONFIRM": "적용",
+      "PLACEHOLDER": "기간 선택"
     },
-    "GROUP_BY_FILTER_DROPDOWN_LABEL": "Group By",
-    "DURATION_FILTER_LABEL": "Duration",
+    "GROUP_BY_FILTER_DROPDOWN_LABEL": "그룹화 기준",
+    "DURATION_FILTER_LABEL": "기간",
     "GROUPING_OPTIONS": {
-      "DAY": "Day",
-      "WEEK": "Week",
-      "MONTH": "Month",
-      "YEAR": "Month"
+      "DAY": "일별",
+      "WEEK": "주별",
+      "MONTH": "월별",
+      "YEAR": "년별"
     },
     "GROUP_BY_DAY_OPTIONS": [
       {
         "id": 1,
-        "groupBy": "Day"
+        "groupBy": "일별"
       }
     ],
     "GROUP_BY_WEEK_OPTIONS": [
       {
         "id": 1,
-        "groupBy": "Day"
+        "groupBy": "일별"
       },
       {
         "id": 2,
-        "groupBy": "Week"
+        "groupBy": "주별"
       }
     ],
     "GROUP_BY_MONTH_OPTIONS": [
       {
         "id": 1,
-        "groupBy": "Day"
+        "groupBy": "일별"
       },
       {
         "id": 2,
-        "groupBy": "Week"
+        "groupBy": "주별"
       },
       {
         "id": 3,
-        "groupBy": "Month"
+        "groupBy": "월별"
       }
     ],
     "GROUP_BY_YEAR_OPTIONS": [
       {
-        "id": 1,
-        "groupBy": "Day"
-      },
-      {
         "id": 2,
-        "groupBy": "Week"
+        "groupBy": "주별"
       },
       {
         "id": 3,
-        "groupBy": "Month"
+        "groupBy": "월별"
+      },
+      {
+        "id": 4,
+        "groupBy": "년별"
       }
     ],
-    "BUSINESS_HOURS": "영업시간",
+    "BUSINESS_HOURS": "영업 시간",
     "FILTER_ACTIONS": {
-      "CLEAR_FILTER": "Clear filter",
-      "EMPTY_LIST": "검색 결과가 없습니다"
+      "CLEAR_FILTER": "필터 초기화",
+      "EMPTY_LIST": "결과가 없습니다"
     },
     "PAGINATION": {
-      "RESULTS": "Showing {start} to {end} of {total} results",
-      "PER_PAGE_TEMPLATE": "{size} / page"
+      "RESULTS": "{total}건 중 {start}–{end} 표시",
+      "PER_PAGE_TEMPLATE": "페이지당 {size}개"
     }
   },
   "AGENT_REPORTS": {
-    "HEADER": "Agents Overview",
-    "DESCRIPTION": "Easily track agent performance with key metrics such as conversations, response times, resolution times, and resolved cases. Click an agent’s name to learn more.",
-    "LOADING_CHART": "차트 데이터 불러오는 중...",
-    "NO_ENOUGH_DATA": "보고서를 생성할 수 있는 데이터 포인트가 부족합니다. 나중에 다시 시도하십시오.",
-    "DOWNLOAD_AGENT_REPORTS": "다운로드 에이전트 보고서",
+    "HEADER": "에이전트 개요",
+    "DESCRIPTION": "대화 수, 응답 시간, 해결 시간, 해결 건수 등 주요 지표로 에이전트 성과를 쉽게 추적할 수 있습니다. 에이전트 이름을 클릭하면 자세히 볼 수 있습니다.",
+    "LOADING_CHART": "차트 데이터 로드 중…",
+    "NO_ENOUGH_DATA": "보고서를 생성하기에 충분한 데이터가 없습니다. 나중에 다시 시도하세요.",
+    "DOWNLOAD_AGENT_REPORTS": "에이전트 보고서 다운로드",
     "FILTER_DROPDOWN_LABEL": "에이전트 선택",
     "METRICS": {
       "CONVERSATIONS": {
-        "NAME": "대화",
-        "DESC": "( 총 )"
+        "NAME": "대화 수",
+        "DESC": "(총)"
       },
       "INCOMING_MESSAGES": {
         "NAME": "수신 메시지",
-        "DESC": "( 총 )"
+        "DESC": "(총)"
       },
       "OUTGOING_MESSAGES": {
         "NAME": "발신 메시지",
-        "DESC": "( 총 )"
+        "DESC": "(총)"
       },
       "FIRST_RESPONSE_TIME": {
-        "NAME": "First Response Time",
-        "DESC": "( 평균 )",
-        "INFO_TEXT": "Total number of conversations used for computation:",
-        "TOOLTIP_TEXT": "First Response Time is {metricValue} (based on {conversationCount} conversations)"
+        "NAME": "첫 응답 시간",
+        "DESC": "(평균)",
+        "INFO_TEXT": "계산에 사용된 대화 수:",
+        "TOOLTIP_TEXT": "첫 응답 시간은 {conversationCount}개의 대화를 기준으로 평균 {metricValue}입니다"
       },
       "RESOLUTION_TIME": {
         "NAME": "해결 시간",
-        "DESC": "( 평균 )",
-        "INFO_TEXT": "Total number of conversations used for computation:",
-        "TOOLTIP_TEXT": "Resolution Time is {metricValue} (based on {conversationCount} conversations)"
+        "DESC": "(평균)",
+        "INFO_TEXT": "계산에 사용된 대화 수:",
+        "TOOLTIP_TEXT": "해결 시간은 {conversationCount}개의 대화를 기준으로 평균 {metricValue}입니다"
       },
       "RESOLUTION_COUNT": {
-        "NAME": "해결 수",
-        "DESC": "( 총 )"
+        "NAME": "해결 건수",
+        "DESC": "(총)"
       }
     },
     "DATE_RANGE": [
-      {
-        "id": 0,
-        "name": "지난 7일"
-      },
-      {
-        "id": 1,
-        "name": "지난 30일"
-      },
-      {
-        "id": 2,
-        "name": "Last 3 months"
-      },
-      {
-        "id": 3,
-        "name": "Last 6 months"
-      },
-      {
-        "id": 4,
-        "name": "Last year"
-      },
-      {
-        "id": 5,
-        "name": "Custom date range"
-      }
+      { "id": 0, "name": "지난 7일" },
+      { "id": 1, "name": "지난 30일" },
+      { "id": 2, "name": "지난 3개월" },
+      { "id": 3, "name": "지난 6개월" },
+      { "id": 4, "name": "지난 1년" },
+      { "id": 5, "name": "사용자 지정 기간" }
     ],
     "CUSTOM_DATE_RANGE": {
-      "CONFIRM": "Apply",
-      "PLACEHOLDER": "Select date range"
+      "CONFIRM": "적용",
+      "PLACEHOLDER": "기간 선택"
     }
   },
   "LABEL_REPORTS": {
-    "HEADER": "Labels Overview",
-    "LOADING_CHART": "차트 데이터 불러오는 중...",
-    "NO_ENOUGH_DATA": "보고서를 생성할 수 있는 데이터 포인트가 부족합니다. 나중에 다시 시도하십시오.",
-    "DOWNLOAD_LABEL_REPORTS": "Download label reports",
-    "FILTER_DROPDOWN_LABEL": "Select Label",
+    "HEADER": "라벨 개요",
+    "LOADING_CHART": "차트 데이터 로드 중…",
+    "NO_ENOUGH_DATA": "보고서를 생성하기에 충분한 데이터가 없습니다. 나중에 다시 시도하세요.",
+    "DOWNLOAD_LABEL_REPORTS": "라벨 보고서 다운로드",
+    "FILTER_DROPDOWN_LABEL": "라벨 선택",
     "METRICS": {
       "CONVERSATIONS": {
-        "NAME": "대화",
-        "DESC": "( 총 )"
+        "NAME": "대화 수",
+        "DESC": "(총)"
       },
       "INCOMING_MESSAGES": {
         "NAME": "수신 메시지",
-        "DESC": "( 총 )"
+        "DESC": "(총)"
       },
       "OUTGOING_MESSAGES": {
         "NAME": "발신 메시지",
-        "DESC": "( 총 )"
+        "DESC": "(총)"
       },
       "FIRST_RESPONSE_TIME": {
-        "NAME": "First Response Time",
-        "DESC": "( 평균 )",
-        "INFO_TEXT": "Total number of conversations used for computation:",
-        "TOOLTIP_TEXT": "First Response Time is {metricValue} (based on {conversationCount} conversations)"
+        "NAME": "첫 응답 시간",
+        "DESC": "(평균)",
+        "INFO_TEXT": "계산에 사용된 대화 수:",
+        "TOOLTIP_TEXT": "첫 응답 시간은 {conversationCount}개의 대화를 기준으로 평균 {metricValue}입니다"
       },
       "RESOLUTION_TIME": {
         "NAME": "해결 시간",
-        "DESC": "( 평균 )",
-        "INFO_TEXT": "Total number of conversations used for computation:",
-        "TOOLTIP_TEXT": "Resolution Time is {metricValue} (based on {conversationCount} conversations)"
+        "DESC": "(평균)",
+        "INFO_TEXT": "계산에 사용된 대화 수:",
+        "TOOLTIP_TEXT": "해결 시간은 {conversationCount}개의 대화를 기준으로 평균 {metricValue}입니다"
       },
       "RESOLUTION_COUNT": {
-        "NAME": "해결 수",
-        "DESC": "( 총 )"
+        "NAME": "해결 건수",
+        "DESC": "(총)"
       }
     },
     "DATE_RANGE": [
-      {
-        "id": 0,
-        "name": "지난 7일"
-      },
-      {
-        "id": 1,
-        "name": "지난 30일"
-      },
-      {
-        "id": 2,
-        "name": "Last 3 months"
-      },
-      {
-        "id": 3,
-        "name": "Last 6 months"
-      },
-      {
-        "id": 4,
-        "name": "Last year"
-      },
-      {
-        "id": 5,
-        "name": "Custom date range"
-      }
+      { "id": 0, "name": "지난 7일" },
+      { "id": 1, "name": "지난 30일" },
+      { "id": 2, "name": "지난 3개월" },
+      { "id": 3, "name": "지난 6개월" },
+      { "id": 4, "name": "지난 1년" },
+      { "id": 5, "name": "사용자 지정 기간" }
     ],
     "CUSTOM_DATE_RANGE": {
-      "CONFIRM": "Apply",
-      "PLACEHOLDER": "Select date range"
+      "CONFIRM": "적용",
+      "PLACEHOLDER": "기간 선택"
     }
   },
   "INBOX_REPORTS": {
-    "HEADER": "Inbox Overview",
-    "DESCRIPTION": "Quickly view your inbox performance with key metrics like conversations, response times, resolution times, and resolved cases—all in one place. Click an inbox name for more details.",
-    "LOADING_CHART": "차트 데이터 불러오는 중...",
-    "NO_ENOUGH_DATA": "보고서를 생성할 수 있는 데이터 포인트가 부족합니다. 나중에 다시 시도하십시오.",
-    "DOWNLOAD_INBOX_REPORTS": "Download inbox reports",
-    "FILTER_DROPDOWN_LABEL": "Select Inbox",
+    "HEADER": "수신함 개요",
+    "DESCRIPTION": "수신함 성과를 대화 수, 응답 시간, 해결 시간, 해결 건수 등 주요 지표로 빠르게 확인할 수 있습니다. 수신함 이름을 클릭하면 자세히 볼 수 있습니다.",
+    "LOADING_CHART": "차트 데이터 로드 중…",
+    "NO_ENOUGH_DATA": "보고서를 생성하기에 충분한 데이터가 없습니다. 나중에 다시 시도하세요.",
+    "DOWNLOAD_INBOX_REPORTS": "수신함 보고서 다운로드",
+    "FILTER_DROPDOWN_LABEL": "수신함 선택",
     "METRICS": {
       "CONVERSATIONS": {
-        "NAME": "대화",
-        "DESC": "( 총 )"
+        "NAME": "대화 수",
+        "DESC": "(총)"
       },
       "INCOMING_MESSAGES": {
         "NAME": "수신 메시지",
-        "DESC": "( 총 )"
+        "DESC": "(총)"
       },
       "OUTGOING_MESSAGES": {
         "NAME": "발신 메시지",
-        "DESC": "( 총 )"
+        "DESC": "(총)"
       },
       "FIRST_RESPONSE_TIME": {
-        "NAME": "First Response Time",
-        "DESC": "( 평균 )",
-        "INFO_TEXT": "Total number of conversations used for computation:",
-        "TOOLTIP_TEXT": "First Response Time is {metricValue} (based on {conversationCount} conversations)"
+        "NAME": "첫 응답 시간",
+        "DESC": "(평균)",
+        "INFO_TEXT": "계산에 사용된 대화 수:",
+        "TOOLTIP_TEXT": "첫 응답 시간은 {conversationCount}개의 대화를 기준으로 평균 {metricValue}입니다"
       },
       "RESOLUTION_TIME": {
         "NAME": "해결 시간",
-        "DESC": "( 평균 )",
-        "INFO_TEXT": "Total number of conversations used for computation:",
-        "TOOLTIP_TEXT": "Resolution Time is {metricValue} (based on {conversationCount} conversations)"
+        "DESC": "(평균)",
+        "INFO_TEXT": "계산에 사용된 대화 수:",
+        "TOOLTIP_TEXT": "해결 시간은 {conversationCount}개의 대화를 기준으로 평균 {metricValue}입니다"
       },
       "RESOLUTION_COUNT": {
-        "NAME": "해결 수",
-        "DESC": "( 총 )"
+        "NAME": "해결 건수",
+        "DESC": "(총)"
       }
     },
     "DATE_RANGE": [
-      {
-        "id": 0,
-        "name": "지난 7일"
-      },
-      {
-        "id": 1,
-        "name": "지난 30일"
-      },
-      {
-        "id": 2,
-        "name": "Last 3 months"
-      },
-      {
-        "id": 3,
-        "name": "Last 6 months"
-      },
-      {
-        "id": 4,
-        "name": "Last year"
-      },
-      {
-        "id": 5,
-        "name": "Custom date range"
-      }
+      { "id": 0, "name": "지난 7일" },
+      { "id": 1, "name": "지난 30일" },
+      { "id": 2, "name": "지난 3개월" },
+      { "id": 3, "name": "지난 6개월" },
+      { "id": 4, "name": "지난 1년" },
+      { "id": 5, "name": "사용자 지정 기간" }
     ],
     "CUSTOM_DATE_RANGE": {
-      "CONFIRM": "Apply",
-      "PLACEHOLDER": "Select date range"
+      "CONFIRM": "적용",
+      "PLACEHOLDER": "기간 선택"
     }
   },
   "TEAM_REPORTS": {
-    "HEADER": "Team Overview",
-    "DESCRIPTION": "Get a snapshot of your team’s performance with essential metrics, including conversations, response times, resolution times, and resolved cases. Click a team name for more details.",
-    "LOADING_CHART": "차트 데이터 불러오는 중...",
-    "NO_ENOUGH_DATA": "보고서를 생성할 수 있는 데이터 포인트가 부족합니다. 나중에 다시 시도하십시오.",
-    "DOWNLOAD_TEAM_REPORTS": "Download team reports",
-    "FILTER_DROPDOWN_LABEL": "Select Team",
+    "HEADER": "팀 개요",
+    "DESCRIPTION": "대화 수, 응답 시간, 해결 시간, 해결 건수 등 핵심 지표로 팀 성과를 한눈에 확인할 수 있습니다. 팀 이름을 클릭하면 자세히 볼 수 있습니다.",
+    "LOADING_CHART": "차트 데이터 로드 중…",
+    "NO_ENOUGH_DATA": "보고서를 생성하기에 충분한 데이터가 없습니다. 나중에 다시 시도하세요.",
+    "DOWNLOAD_TEAM_REPORTS": "팀 보고서 다운로드",
+    "FILTER_DROPDOWN_LABEL": "팀 선택",
     "METRICS": {
       "CONVERSATIONS": {
-        "NAME": "대화",
-        "DESC": "( 총 )"
+        "NAME": "대화 수",
+        "DESC": "(총)"
       },
       "INCOMING_MESSAGES": {
         "NAME": "수신 메시지",
-        "DESC": "( 총 )"
+        "DESC": "(총)"
       },
       "OUTGOING_MESSAGES": {
         "NAME": "발신 메시지",
-        "DESC": "( 총 )"
+        "DESC": "(총)"
       },
       "FIRST_RESPONSE_TIME": {
-        "NAME": "First Response Time",
-        "DESC": "( 평균 )",
-        "INFO_TEXT": "Total number of conversations used for computation:",
-        "TOOLTIP_TEXT": "First Response Time is {metricValue} (based on {conversationCount} conversations)"
+        "NAME": "첫 응답 시간",
+        "DESC": "(평균)",
+        "INFO_TEXT": "계산에 사용된 대화 수:",
+        "TOOLTIP_TEXT": "첫 응답 시간은 {conversationCount}개의 대화를 기준으로 평균 {metricValue}입니다"
       },
       "RESOLUTION_TIME": {
         "NAME": "해결 시간",
-        "DESC": "( 평균 )",
-        "INFO_TEXT": "Total number of conversations used for computation:",
-        "TOOLTIP_TEXT": "Resolution Time is {metricValue} (based on {conversationCount} conversations)"
+        "DESC": "(평균)",
+        "INFO_TEXT": "계산에 사용된 대화 수:",
+        "TOOLTIP_TEXT": "해결 시간은 {conversationCount}개의 대화를 기준으로 평균 {metricValue}입니다"
       },
       "RESOLUTION_COUNT": {
-        "NAME": "해결 수",
-        "DESC": "( 총 )"
+        "NAME": "해결 건수",
+        "DESC": "(총)"
       }
     },
     "DATE_RANGE": [
-      {
-        "id": 0,
-        "name": "지난 7일"
-      },
-      {
-        "id": 1,
-        "name": "지난 30일"
-      },
-      {
-        "id": 2,
-        "name": "Last 3 months"
-      },
-      {
-        "id": 3,
-        "name": "Last 6 months"
-      },
-      {
-        "id": 4,
-        "name": "Last year"
-      },
-      {
-        "id": 5,
-        "name": "Custom date range"
-      }
+      { "id": 0, "name": "지난 7일" },
+      { "id": 1, "name": "지난 30일" },
+      { "id": 2, "name": "지난 3개월" },
+      { "id": 3, "name": "지난 6개월" },
+      { "id": 4, "name": "지난 1년" },
+      { "id": 5, "name": "사용자 지정 기간" }
     ],
     "CUSTOM_DATE_RANGE": {
-      "CONFIRM": "Apply",
-      "PLACEHOLDER": "Select date range"
+      "CONFIRM": "적용",
+      "PLACEHOLDER": "기간 선택"
     }
   },
   "CSAT_REPORTS": {
-    "HEADER": "CSAT Reports",
-    "NO_RECORDS": "There are no CSAT survey responses available.",
-    "DOWNLOAD": "Download CSAT Reports",
-    "DOWNLOAD_FAILED": "Failed to download CSAT Reports",
+    "HEADER": "CSAT 보고서",
+    "NO_RECORDS": "사용 가능한 CSAT 설문 응답이 없습니다.",
+    "DOWNLOAD": "CSAT 보고서 다운로드",
+    "DOWNLOAD_FAILED": "CSAT 보고서 다운로드에 실패했습니다",
     "FILTERS": {
       "AGENTS": {
-        "PLACEHOLDER": "Choose Agents"
+        "PLACEHOLDER": "에이전트 선택"
       }
     },
     "TABLE": {
       "HEADER": {
-        "CONTACT_NAME": "Contact",
-        "AGENT_NAME": "Assigned agent",
-        "RATING": "Rating",
-        "FEEDBACK_TEXT": "Feedback comment"
+        "CONTACT_NAME": "연락처",
+        "AGENT_NAME": "담당 에이전트",
+        "RATING": "평점",
+        "FEEDBACK_TEXT": "피드백"
       }
     },
     "METRIC": {
       "TOTAL_RESPONSES": {
-        "LABEL": "Total responses",
-        "TOOLTIP": "Total number of responses collected"
+        "LABEL": "응답 수",
+        "TOOLTIP": "수집된 응답의 총 수"
       },
       "SATISFACTION_SCORE": {
-        "LABEL": "Satisfaction score",
-        "TOOLTIP": "Total number of positive responses / Total number of responses * 100"
+        "LABEL": "만족도 점수",
+        "TOOLTIP": "긍정 응답 수 ÷ 전체 응답 수 × 100"
       },
       "RESPONSE_RATE": {
-        "LABEL": "Response rate",
-        "TOOLTIP": "Total number of responses / Total number of CSAT survey messages sent * 100"
+        "LABEL": "응답률",
+        "TOOLTIP": "응답 수 ÷ 전송된 CSAT 설문 메시지 수 × 100"
       }
     }
   },
   "BOT_REPORTS": {
-    "HEADER": "Bot Reports",
+    "HEADER": "봇 보고서",
     "METRIC": {
       "TOTAL_CONVERSATIONS": {
-        "LABEL": "No. of Conversations",
-        "TOOLTIP": "Total number of conversations handled by the bot"
+        "LABEL": "대화 수",
+        "TOOLTIP": "봇이 처리한 대화 수"
       },
       "TOTAL_RESPONSES": {
-        "LABEL": "Total Responses",
-        "TOOLTIP": "Total number of responses sent by the bot"
+        "LABEL": "응답 수",
+        "TOOLTIP": "봇이 보낸 응답 수"
       },
       "RESOLUTION_RATE": {
-        "LABEL": "Resolution Rate",
-        "TOOLTIP": "Total number of conversations resolved by the bot / Total number of conversations handled by the bot * 100"
+        "LABEL": "해결률",
+        "TOOLTIP": "봇이 해결한 대화 수 ÷ 봇이 처리한 대화 수 × 100"
       },
       "HANDOFF_RATE": {
-        "LABEL": "Handoff Rate",
-        "TOOLTIP": "Total number of conversations handed off to agents / Total number of conversations handled by the bot * 100"
+        "LABEL": "이관률",
+        "TOOLTIP": "봇이 에이전트에 이관한 대화 수 ÷ 봇이 처리한 대화 수 × 100"
       }
     }
   },
   "OVERVIEW_REPORTS": {
-    "HEADER": "Overview",
-    "LIVE": "Live",
+    "HEADER": "개요",
+    "LIVE": "실시간",
     "ACCOUNT_CONVERSATIONS": {
-      "HEADER": "Open Conversations",
-      "LOADING_MESSAGE": "Loading conversation metrics...",
-      "OPEN": "열기",
-      "UNATTENDED": "Unattended",
-      "UNASSIGNED": "지정되지 않음",
-      "PENDING": "보내는 중"
+      "HEADER": "열린 대화",
+      "LOADING_MESSAGE": "대화 지표 로드 중…",
+      "OPEN": "열림",
+      "UNATTENDED": "미처리",
+      "UNASSIGNED": "미할당",
+      "PENDING": "보류"
     },
     "CONVERSATION_HEATMAP": {
-      "HEADER": "Conversation Traffic",
-      "NO_CONVERSATIONS": "No conversations",
-      "CONVERSATION": "{count} conversation",
-      "CONVERSATIONS": "{count} conversations",
-      "DOWNLOAD_REPORT": "Download report"
+      "HEADER": "대화 트래픽",
+      "NO_CONVERSATIONS": "대화 없음",
+      "CONVERSATION": "{count}건 대화",
+      "CONVERSATIONS": "{count}건 대화",
+      "DOWNLOAD_REPORT": "보고서 다운로드"
     },
     "AGENT_CONVERSATIONS": {
-      "HEADER": "Conversations by agents",
-      "LOADING_MESSAGE": "Loading agent metrics...",
-      "NO_AGENTS": "There are no conversations by agents",
+      "HEADER": "에이전트별 대화",
+      "LOADING_MESSAGE": "에이전트 지표 로드 중…",
+      "NO_AGENTS": "에이전트별 대화가 없습니다",
       "TABLE_HEADER": {
         "AGENT": "에이전트",
-        "OPEN": "열기",
-        "UNATTENDED": "Unattended",
+        "OPEN": "열림",
+        "UNATTENDED": "미처리",
         "STATUS": "상태"
       }
     },
     "TEAM_CONVERSATIONS": {
-      "ALL_TEAMS": "All Teams",
-      "HEADER": "Conversations by teams",
-      "LOADING_MESSAGE": "Loading team metrics...",
-      "NO_TEAMS": "There is no data available",
+      "ALL_TEAMS": "전체 팀",
+      "HEADER": "팀별 대화",
+      "LOADING_MESSAGE": "팀 지표 로드 중…",
+      "NO_TEAMS": "데이터가 없습니다",
       "TABLE_HEADER": {
-        "TEAM": "Team",
-        "OPEN": "열기",
-        "UNATTENDED": "Unattended",
+        "TEAM": "팀",
+        "OPEN": "열림",
+        "UNATTENDED": "미처리",
         "STATUS": "상태"
       }
     },
     "AGENT_STATUS": {
-      "HEADER": "Agent status",
+      "HEADER": "에이전트 상태",
       "ONLINE": "온라인",
       "BUSY": "바쁨",
       "OFFLINE": "오프라인"
     }
   },
   "DAYS_OF_WEEK": {
-    "SUNDAY": "Sunday",
-    "MONDAY": "Monday",
-    "TUESDAY": "Tuesday",
-    "WEDNESDAY": "Wednesday",
-    "THURSDAY": "Thursday",
-    "FRIDAY": "Friday",
-    "SATURDAY": "Saturday"
+    "SUNDAY": "일요일",
+    "MONDAY": "월요일",
+    "TUESDAY": "화요일",
+    "WEDNESDAY": "수요일",
+    "THURSDAY": "목요일",
+    "FRIDAY": "금요일",
+    "SATURDAY": "토요일"
   },
   "SLA_REPORTS": {
-    "HEADER": "SLA Reports",
-    "NO_RECORDS": "SLA applied conversations are not available.",
-    "LOADING": "Loading SLA data...",
-    "DOWNLOAD_SLA_REPORTS": "Download SLA reports",
-    "DOWNLOAD_FAILED": "Failed to download SLA Reports",
+    "HEADER": "SLA 보고서",
+    "NO_RECORDS": "SLA가 적용된 대화가 없습니다.",
+    "LOADING": "SLA 데이터 로드 중…",
+    "DOWNLOAD_SLA_REPORTS": "SLA 보고서 다운로드",
+    "DOWNLOAD_FAILED": "SLA 보고서 다운로드에 실패했습니다",
     "DROPDOWN": {
-      "ADD_FIlTER": "Add filter",
-      "CLEAR_ALL": "Clear all",
-      "CLEAR_FILTER": "Clear filter",
-      "EMPTY_LIST": "검색 결과가 없습니다",
-      "NO_FILTER": "No filters available",
-      "SEARCH": "Search filter",
+      "ADD_FIlTER": "필터 추가",
+      "CLEAR_ALL": "전체 초기화",
+      "CLEAR_FILTER": "필터 초기화",
+      "EMPTY_LIST": "결과가 없습니다",
+      "NO_FILTER": "사용 가능한 필터가 없습니다",
+      "SEARCH": "필터 검색",
       "INPUT_PLACEHOLDER": {
-        "SLA": "SLA name",
-        "AGENTS": "Agent name",
-        "INBOXES": "Inbox name",
+        "SLA": "SLA 이름",
+        "AGENTS": "에이전트 이름",
+        "INBOXES": "수신함 이름",
         "LABELS": "라벨 이름",
-        "TEAMS": "Team name"
+        "TEAMS": "팀 이름"
       },
-      "SLA": "SLA Policy",
-      "INBOXES": "받은 메시지함",
+      "SLA": "SLA 정책",
+      "INBOXES": "수신함",
       "AGENTS": "에이전트",
-      "LABELS": "Label",
-      "TEAMS": "Team"
+      "LABELS": "라벨",
+      "TEAMS": "팀"
     },
-    "WITH": "with",
+    "WITH": "조건:",
     "METRICS": {
       "HIT_RATE": {
-        "LABEL": "Hit Rate",
-        "TOOLTIP": "Percentage of SLAs created were completed successfully"
+        "LABEL": "적중률",
+        "TOOLTIP": "성공적으로 완료된 SLA 비율"
       },
       "NO_OF_MISSES": {
-        "LABEL": "Number of Misses",
-        "TOOLTIP": "Total SLA misses in a certain period"
+        "LABEL": "놓친 건수",
+        "TOOLTIP": "기간 내 SLA 실패 건수"
       },
       "NO_OF_CONVERSATIONS": {
-        "LABEL": "Number of Conversations",
-        "TOOLTIP": "Total number of conversations with SLA"
+        "LABEL": "SLA 적용 대화 수",
+        "TOOLTIP": "SLA가 적용된 대화 수"
       }
     },
     "TABLE": {
       "HEADER": {
-        "POLICY": "Policy",
-        "CONVERSATION": "Conversation",
+        "POLICY": "정책",
+        "CONVERSATION": "대화",
         "AGENT": "에이전트"
       },
-      "VIEW_DETAILS": "View Details"
+      "VIEW_DETAILS": "자세히 보기"
     }
   },
   "SUMMARY_REPORTS": {
-    "INBOX": "받은 메시지함",
+    "INBOX": "수신함",
     "AGENT": "에이전트",
-    "TEAM": "Team",
-    "AVG_RESOLUTION_TIME": "Avg. Resolution Time",
-    "AVG_FIRST_RESPONSE_TIME": "Avg. First Response Time",
-    "AVG_REPLY_TIME": "Avg. Customer Waiting Time",
-    "RESOLUTION_COUNT": "해결 수",
-    "CONVERSATIONS": "No. of conversations"
+    "TEAM": "팀",
+    "AVG_RESOLUTION_TIME": "평균 해결 시간",
+    "AVG_FIRST_RESPONSE_TIME": "평균 첫 응답 시간",
+    "AVG_REPLY_TIME": "평균 고객 대기 시간",
+    "RESOLUTION_COUNT": "해결 건수",
+    "CONVERSATIONS": "대화 수"
   }
 }

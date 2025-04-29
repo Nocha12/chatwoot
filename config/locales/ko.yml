@@ -142,9 +142,9 @@ ko:
         error_code: 'Error code: %{error_code}'
     activity:
       status:
-        resolved: 'Conversation was marked resolved by %{user_name}'
-        contact_resolved: 'Conversation was resolved by %{contact_name}'
-        open: 'Conversation was reopened by %{user_name}'
+        resolved: '%{user_name}에 의해 대화가 종료됐습니다.'
+        contact_resolved: '%{contact_name}에 의해 대화가 종료됐습니다.'
+        open: '%{user_name}에 의해 대화가 재개됐습니다.'
         pending: 'Conversation was marked as pending by %{user_name}'
         snoozed: 'Conversation was snoozed by %{user_name}'
         auto_resolved: 'Conversation was marked resolved by system due to %{duration} days of inactivity'
@@ -154,8 +154,8 @@ ko:
         updated: '%{user_name} changed the priority from %{old_priority} to %{new_priority}'
         removed: '%{user_name} removed the priority'
       assignee:
-        self_assigned: '%{user_name} self-assigned this conversation'
-        assigned: 'Assigned to %{assignee_name} by %{user_name}'
+        self_assigned: '%{user_name}가 담당을 시작했습니다.'
+        assigned: '%{user_name}가 %{assignee_name}를 대화의 담당자로 지정했습니다.'
         removed: 'Conversation unassigned by %{user_name}'
       team:
         assigned: 'Assigned to %{team_name} by %{user_name}'
@@ -233,7 +233,7 @@ ko:
       results_title: 검색 결과
     toc_header: 'On this page'
     hero:
-      sub_title: 게시물을 여기서 검색하거나 아래에서 카테고리를 탐색해보세요. 
+      sub_title: 게시물을 여기서 검색하거나 아래에서 카테고리를 탐색해보세요.
     common:
       home: 홈
       last_updated_on: '%{last_updated_on}에 마지막으로 업데이트 됨'

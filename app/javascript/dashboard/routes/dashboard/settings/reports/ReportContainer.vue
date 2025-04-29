@@ -4,9 +4,38 @@ import { useReportMetrics } from 'dashboard/composables/useReportMetrics';
 import { GROUP_BY_FILTER, METRIC_CHART } from './constants';
 import fromUnixTime from 'date-fns/fromUnixTime';
 import format from 'date-fns/format';
-import { formatTime } from '@chatwoot/utils';
+// import { formatTime } from '@chatwoot/utils';
 import ChartStats from './components/ChartElements/ChartStats.vue';
 import BarChart from 'shared/components/charts/BarChart.vue';
+
+const formatTimeInKorean = timeInSeconds => {
+  let formattedTime = '';
+  if (timeInSeconds >= 60 && timeInSeconds < 3600) {
+    const minutes = Math.floor(timeInSeconds / 60);
+    formattedTime = `${minutes} 분`;
+    const seconds = minutes === 60 ? 0 : Math.floor(timeInSeconds % 60);
+    return formattedTime + `${seconds > 0 ? ' ' + seconds + ' 초' : ''}`;
+  }
+  if (timeInSeconds >= 3600 && timeInSeconds < 86400) {
+    const hours = Math.floor(timeInSeconds / 3600);
+    formattedTime = `${hours} 시간`;
+    const minutes =
+      timeInSeconds % 3600 < 60 || hours === 24
+        ? 0
+        : Math.floor((timeInSeconds % 3600) / 60);
+    return formattedTime + `${minutes > 0 ? ' ' + minutes + ' 분' : ''}`;
+  }
+  if (timeInSeconds >= 86400) {
+    const days = Math.floor(timeInSeconds / 86400);
+    formattedTime = `${days} 일`;
+    const hours =
+      timeInSeconds % 86400 < 3600 || days >= 364
+        ? 0
+        : Math.floor((timeInSeconds % 86400) / 3600);
+    return formattedTime + `${hours > 0 ? ' ' + hours + ' 시간' : ''}`;
+  }
+  return `${Math.floor(timeInSeconds)} 초`;
+};
 
 export default {
   components: { ChartStats, BarChart },
@@ -127,7 +156,7 @@ export default {
             callbacks: {
               label: ({ raw, dataIndex }) => {
                 return this.$t(metric.TOOLTIP_TEXT, {
-                  metricValue: formatTime(raw || 0),
+                  metricValue: formatTimeInKorean(raw || 0),
                   conversationCount:
                     this.accountReport.data[metric.KEY][dataIndex]?.count || 0,
                 });

@@ -69,7 +69,8 @@ export const getArticleStatus = status => {
 // Constants
 export const HELP_CENTER_MENU_ITEMS = [
   {
-    label: 'Articles',
+    // label: 'Articles',
+    label: '포스팅',
     icon: 'i-lucide-book',
     action: 'portals_articles_index',
     value: [
@@ -79,7 +80,7 @@ export const HELP_CENTER_MENU_ITEMS = [
     ],
   },
   {
-    label: 'Categories',
+    label: '카테고리',
     icon: 'i-lucide-folder',
     action: 'portals_categories_index',
     value: [
@@ -89,13 +90,13 @@ export const HELP_CENTER_MENU_ITEMS = [
     ],
   },
   {
-    label: 'Locales',
+    label: '지역별',
     icon: 'i-lucide-languages',
     action: 'portals_locales_index',
     value: ['portals_locales_index'],
   },
   {
-    label: 'Settings',
+    label: '설정',
     icon: 'i-lucide-settings',
     action: 'portals_settings_index',
     value: ['portals_settings_index'],

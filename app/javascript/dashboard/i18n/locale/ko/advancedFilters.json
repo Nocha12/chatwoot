@@ -20,8 +20,8 @@
     },
     "INPUT_PLACEHOLDER": "값을 입력하세요",
     "OPERATOR_LABELS": {
-      "equal_to": "동일한",
-      "not_equal_to": "비동일한",
+      "equal_to": "다음과 동일한",
+      "not_equal_to": "다음과 동일하지 않은",
       "does_not_contain": "포함되지 않은",
       "is_present": "현존하는",
       "is_not_present": "현존하지 않은",

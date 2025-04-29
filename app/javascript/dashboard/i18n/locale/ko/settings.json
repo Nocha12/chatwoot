@@ -330,7 +330,7 @@
     "REAUTHORIZE": "인박스 연결이 만료되었습니다. 계속 메시지 수신/전송하려면 다시 연결하세요",
     "HELP_CENTER": {
       "TITLE": "도움말 센터",
-      "ARTICLES": "기사",
+      "ARTICLES": "게시글",
       "CATEGORIES": "카테고리",
       "LOCALES": "로케일",
       "SETTINGS": "설정"

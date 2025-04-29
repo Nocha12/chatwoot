@@ -14,7 +14,7 @@ import InstagramStory from './bubble/InstagramStory.vue';
 import InstagramStoryReply from './bubble/InstagramStoryReply.vue';
 import Spinner from 'shared/components/Spinner.vue';
 import { CONTENT_TYPES } from 'shared/constants/contentType';
-import { MESSAGE_TYPE, MESSAGE_STATUS } from 'shared/constants/messages';
+import { MESSAGE_STATUS, MESSAGE_TYPE } from 'shared/constants/messages';
 import { generateBotMessageContent } from './helpers/botMessageContentHelper';
 import { BUS_EVENTS } from 'shared/constants/busEvents';
 import { ACCOUNT_EVENTS } from 'dashboard/helper/AnalyticsHelper/events';

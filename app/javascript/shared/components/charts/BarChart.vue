@@ -9,6 +9,7 @@ import {
   CategoryScale,
   LinearScale,
 } from 'chart.js';
+import { format } from 'date-fns';
 
 const props = defineProps({
   collection: {
@@ -48,6 +49,9 @@ const defaultChartOptions = {
       ticks: {
         fontFamily: fontFamily,
       },
+      // callback: value => {
+      //   return format(new Date(value), 'MM. d');
+      // },
       grid: {
         drawOnChartArea: false,
       },
@@ -70,8 +74,18 @@ const defaultChartOptions = {
 const options = computed(() => {
   return { ...defaultChartOptions, ...props.chartOptions };
 });
+// TODO
+const formattedCollection = computed(() => {
+  if (!props.collection.labels) return props.collection;
+  return {
+    ...props.collection,
+    labels: props.collection.labels.map(dateStr =>
+      format(new Date(dateStr), 'MM. d')
+    ),
+  };
+});
 </script>
 
 <template>
-  <Bar :data="collection" :options="options" />
+  <Bar :data="formattedCollection" :options="options" />
 </template>

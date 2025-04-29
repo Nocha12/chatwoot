@@ -50,7 +50,8 @@ function getCountTooltip(value) {
 }
 
 function formatDate(dateString) {
-  return format(new Date(dateString), 'MMM d, yyyy');
+  // TODO return format(new Date(dateString), 'MMM d, yyyy');
+  return format(new Date(dateString), 'yy. M. d');
 }
 
 function getDayOfTheWeek(date) {

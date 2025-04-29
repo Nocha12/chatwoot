@@ -94,17 +94,18 @@ export default {
       const { snoozed_until: snoozedUntil } = this.currentChat;
       if (snoozedUntil) {
         return `${this.$t(
-          'CONVERSATION.HEADER.SNOOZED_UNTIL'
+          'CONVERSATION.HEADER기.SNOOZED_UNTIL'
         )} ${snoozedReopenTime(snoozedUntil)}`;
       }
       return this.$t('CONVERSATION.HEADER.SNOOZED_UNTIL_NEXT_REPLY');
     },
     contactPanelToggleText() {
-      return `${
+      // TODO: 어순
+      return `${this.$t('CONVERSATION.HEADER.DETAILS')} ${
         this.isContactPanelOpen
           ? this.$t('CONVERSATION.HEADER.CLOSE')
           : this.$t('CONVERSATION.HEADER.OPEN')
-      } ${this.$t('CONVERSATION.HEADER.DETAILS')}`;
+      } `;
     },
     inbox() {
       const { inbox_id: inboxId } = this.chat;

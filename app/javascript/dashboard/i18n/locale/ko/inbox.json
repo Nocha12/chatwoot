@@ -2,12 +2,12 @@
   "INBOX": {
     "LIST": {
       "TITLE": "내 수신함",
-      "DISPLAY_DROPDOWN": "표시",
+      "DISPLAY_DROPDOWN": "필터",
       "LOADING": "알림 가져오는 중",
-      "404": "이 그룹에 활성 알림이 없습니다.",
-      "NO_NOTIFICATIONS": "알림 없음",
-      "NOTE": "구독된 모든 수신함의 알림",
-      "NO_MESSAGES_AVAILABLE": "죄송합니다! 메시지를 가져올 수 없습니다",
+      "404": "이 그룹에 활성화된 알림이 없습니다",
+      "NO_NOTIFICATIONS": "새로운 알림 목록이 없습니다",
+      "NOTE": "전체 구독자 알림 수신함",
+      "NO_MESSAGES_AVAILABLE": "선택된 수신함에 메세지가 없습니다",
       "SNOOZED_UNTIL": "보류됨(까지)",
       "SNOOZED_UNTIL_TOMORROW": "내일까지 보류됨",
       "SNOOZED_UNTIL_NEXT_WEEK": "다음 주까지 보류됨"
@@ -65,8 +65,8 @@
       }
     },
     "ALERTS": {
-      "MARK_AS_READ": "알림이 읽음으로 표시되었습니다",
-      "MARK_AS_UNREAD": "알림이 읽지 않음으로 표시되었습니다",
+      "MARK_AS_READ": "알림이 읽음 상태로 저장했습니다.",
+      "MARK_AS_UNREAD": "알림을 읽지 않음로 저장했습니다.",
       "SNOOZE": "알림이 보류되었습니다",
       "DELETE": "알림이 삭제되었습니다",
       "MARK_ALL_READ": "모든 알림이 읽음으로 표시되었습니다",

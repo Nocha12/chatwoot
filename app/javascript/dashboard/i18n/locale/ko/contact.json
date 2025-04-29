@@ -1,6 +1,6 @@
 {
   "CONTACT_PANEL": {
-    "NOT_AVAILABLE": "사용할 수 없음",
+    "NOT_AVAILABLE": "미기재",
     "EMAIL_ADDRESS": "이메일 주소",
     "PHONE_NUMBER": "휴대폰 번호",
     "IDENTIFIER": "식별자",
@@ -34,15 +34,15 @@
         "TITLE": "라벨 추가하기",
         "PLACEHOLDER": "라벨 찾기",
         "NO_RESULT": "라벨을 찾을 수 없습니다",
-        "CREATE_LABEL": "Create new label"
+        "CREATE_LABEL": "라벨 생성"
       }
     },
     "MERGE_CONTACT": "연락처 합치기",
     "CONTACT_ACTIONS": "연락처 활동",
-    "MUTE_CONTACT": "Block Contact",
-    "UNMUTE_CONTACT": "Unblock Contact",
-    "MUTED_SUCCESS": "This contact is blocked successfully. You will not be notified of any future conversations.",
-    "UNMUTED_SUCCESS": "This contact is unblocked successfully.",
+    "MUTE_CONTACT": "차단",
+    "UNMUTE_CONTACT": "차단 해제",
+    "MUTED_SUCCESS": "연락처 차단에 성공했습니다. 새로운 메시지가 와도 알림이 뜨지 않습니다.",
+    "UNMUTED_SUCCESS": "연락처 차단이 해제되었습니다.",
     "SEND_TRANSCRIPT": "대화기록 보내기",
     "EDIT_LABEL": "수정",
     "SIDEBAR_SECTIONS": {
@@ -284,21 +284,21 @@
   "CONTACTS_LAYOUT": {
     "HEADER": {
       "TITLE": "연락처",
-      "SEARCH_TITLE": "Search contacts",
-      "SEARCH_PLACEHOLDER": "Search...",
+      "SEARCH_TITLE": "연락처 검색",
+      "SEARCH_PLACEHOLDER": "검색어...",
       "MESSAGE_BUTTON": "메시지",
       "SEND_MESSAGE": "메시지 보내기",
-      "BLOCK_CONTACT": "Block contact",
-      "UNBLOCK_CONTACT": "Unblock contact",
+      "BLOCK_CONTACT": "연락처 차단",
+      "UNBLOCK_CONTACT": "연락처 차단 해제",
       "BREADCRUMB": {
         "CONTACTS": "연락처"
       },
       "ACTIONS": {
         "CONTACT_CREATION": {
-          "ADD_CONTACT": "Add contact",
-          "EXPORT_CONTACT": "Export contacts",
-          "IMPORT_CONTACT": "Import contacts",
-          "SAVE_CONTACT": "Save contact",
+          "ADD_CONTACT": "연락처 추가",
+          "EXPORT_CONTACT": "연락처 내보내기",
+          "IMPORT_CONTACT": "연락처 불러오기",
+          "SAVE_CONTACT": "연락처 저장",
           "EMAIL_ADDRESS_DUPLICATE": "이 이메일 주소는 다른 연락처에 사용 중입니다.",
           "PHONE_NUMBER_DUPLICATE": "이 전화번호는 다른 연락처에 사용 중입니다.",
           "SUCCESS_MESSAGE": "연락처가 성공적으로 저장되었습니다.",
@@ -328,7 +328,7 @@
           "ERROR_MESSAGE": "오류가 발생했습니다. 다시 시도하십시오."
         },
         "SORT_BY": {
-          "LABEL": "Sort by",
+          "LABEL": "다음으로 정렬",
           "OPTIONS": {
             "NAME": "이름",
             "EMAIL": "이메일",
@@ -341,10 +341,10 @@
           }
         },
         "ORDER": {
-          "LABEL": "Ordering",
+          "LABEL": "정렬 방식",
           "OPTIONS": {
-            "ASCENDING": "Ascending",
-            "DESCENDING": "Descending"
+            "ASCENDING": "오름차순",
+            "DESCENDING": "내림차순"
           }
         },
         "FILTERS": {
@@ -385,12 +385,12 @@
       "BLOCKED_TRUE": "참",
       "BLOCKED_FALSE": "거짓",
       "BUTTONS": {
-        "CLEAR_FILTERS": "Clear filters",
+        "CLEAR_FILTERS": "필터 모두 지우기",
         "UPDATE_SEGMENT": "Update segment",
         "APPLY_FILTERS": "필터 적용하기",
-        "ADD_FILTER": "Add filter"
+        "ADD_FILTER": "필터 추가하기"
       },
-      "TITLE": "Filter contacts",
+      "TITLE": "연락처 필터링",
       "EDIT_SEGMENT": "Edit segment",
       "SEGMENT": {
         "LABEL": "Segment name",
@@ -562,16 +562,16 @@
     "FORM": {
       "GO_TO_CONVERSATION": "보기",
       "SUCCESS_MESSAGE": "The message was sent successfully!",
-      "ERROR_MESSAGE": "An error occurred while creating the conversation. Please try again later.",
+      "ERROR_MESSAGE": "대화 생성중 에러가 발생했습니다. 잠시후 다시 시도해주세요.",
       "NO_INBOX_ALERT": "There are no available inboxes to start a conversation with this contact.",
       "CONTACT_SELECTOR": {
-        "LABEL": "To:",
-        "TAG_INPUT_PLACEHOLDER": "Search for a contact with name, email or phone number",
+        "LABEL": "수신자:",
+        "TAG_INPUT_PLACEHOLDER": "이름, 이메일, 휴대폰 번호로 연락처 검색",
         "CONTACT_CREATING": "Creating contact..."
       },
       "INBOX_SELECTOR": {
-        "LABEL": "Via:",
-        "BUTTON": "Show inboxes"
+        "LABEL": "발신:",
+        "BUTTON": "발신 기관"
       },
       "EMAIL_OPTIONS": {
         "SUBJECT_LABEL": "Subject :",
@@ -597,8 +597,8 @@
         }
       },
       "ACTION_BUTTONS": {
-        "DISCARD": "Discard",
-        "SEND": "Send ({keyCode})"
+        "DISCARD": "취소",
+        "SEND": "전송 ({keyCode})"
       }
     }
   }

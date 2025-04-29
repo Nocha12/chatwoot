@@ -50,6 +50,10 @@ export default {
             this.createdAtTimestamp
           )}`;
     },
+    // TODO
+    lastActivityDate() {
+      return dateFormat(this.lastActivityTimestamp, 'yyyy. M. d', 'ko');
+    },
     lastActivity() {
       const lastActivityTimeDiff =
         Date.now() - this.lastActivityTimestamp * 1000;
@@ -115,6 +119,7 @@ export default {
     }"
     class="ml-auto leading-4 text-xxs text-n-slate-10 hover:text-slate-11"
   >
-    <span>{{ `${createdAtTime} • ${lastActivityTime}` }}</span>
+    <!--    <span>{{ `${createdAtTime} • ${lastActivityTime}` }}</span>-->
+    <span>{{ `${lastActivityDate}` }}</span>
   </div>
 </template>

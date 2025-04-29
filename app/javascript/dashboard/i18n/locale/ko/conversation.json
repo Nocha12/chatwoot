@@ -67,16 +67,16 @@
       "HIDE_LABELS": "라벨 숨기기"
     },
     "HEADER": {
-      "RESOLVE_ACTION": "해결",
-      "REOPEN_ACTION": "다시 열기",
+      "RESOLVE_ACTION": "대화 종료하기",
+      "REOPEN_ACTION": "대화 다시 열기",
       "OPEN_ACTION": "열기",
-      "OPEN": "더 보기",
+      "OPEN": "열기",
       "CLOSE": "닫기",
-      "DETAILS": "세부 정보",
-      "SNOOZED_UNTIL": "다음 시간까지 다시 알림",
-      "SNOOZED_UNTIL_TOMORROW": "내일까지 다시 알림",
-      "SNOOZED_UNTIL_NEXT_WEEK": "다음 주까지 다시 알림",
-      "SNOOZED_UNTIL_NEXT_REPLY": "다음 답장까지 다시 알림",
+      "DETAILS": "고객 정보",
+      "SNOOZED_UNTIL": "다음 시간까지 알림 끄기: ",
+      "SNOOZED_UNTIL_TOMORROW": "내일까지 알림 끄기",
+      "SNOOZED_UNTIL_NEXT_WEEK": "다음 주까지 알림 끄기",
+      "SNOOZED_UNTIL_NEXT_REPLY": "다음 답장까지 알림 끄기",
       "SLA_STATUS": {
         "FRT": "FRT {status}",
         "NRT": "NRT {status}",
@@ -87,10 +87,10 @@
     },
     "RESOLVE_DROPDOWN": {
       "MARK_PENDING": "보류 중으로 표시",
-      "SNOOZE_UNTIL": "다시 알림",
+      "SNOOZE_UNTIL": "다음 까지 알람 끄기: ",
       "SNOOZE": {
-        "TITLE": "다음 시간까지 다시 알림",
-        "NEXT_REPLY": "다음 답장 시",
+        "TITLE": "다음 시간까지 ",
+        "NEXT_REPLY": "다음 답장 까지",
         "TOMORROW": "내일",
         "NEXT_WEEK": "다음 주"
       }
@@ -284,18 +284,18 @@
     }
   },
   "CONVERSATION_SIDEBAR": {
-    "ASSIGNEE_LABEL": "할당된 담당자",
+    "ASSIGNEE_LABEL": "담당자",
     "SELF_ASSIGN": "나에게 할당",
-    "TEAM_LABEL": "할당된 팀",
+    "TEAM_LABEL": "팀",
     "SELECT": {
       "PLACEHOLDER": "없음"
     },
     "ACCORDION": {
       "CONTACT_DETAILS": "연락처 세부 정보",
-      "CONVERSATION_ACTIONS": "대화 작업",
+      "CONVERSATION_ACTIONS": "대화",
       "CONVERSATION_LABELS": "대화 라벨",
       "CONVERSATION_INFO": "대화 정보",
-      "CONTACT_ATTRIBUTES": "연락처 속성",
+      "CONTACT_ATTRIBUTES": "연락처",
       "PREVIOUS_CONVERSATION": "이전 대화",
       "MACROS": "매크로",
       "SHOPIFY_ORDERS": "Shopify 주문"
@@ -352,7 +352,7 @@
   },
   "CONVERSATION_PARTICIPANTS": {
     "SIDEBAR_MENU_TITLE": "참여 중",
-    "SIDEBAR_TITLE": "대화 참여자",
+    "SIDEBAR_TITLE": "참여자",
     "NO_RECORDS_FOUND": "결과를 찾을 수 없습니다",
     "ADD_PARTICIPANTS": "참여자 선택",
     "REMANING_PARTICIPANTS_TEXT": "+{count}명 외",

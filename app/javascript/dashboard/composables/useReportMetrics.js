@@ -1,5 +1,5 @@
 import { useMapGetter } from 'dashboard/composables/store';
-import { formatTime } from '@chatwoot/utils';
+// import { formatTime } from '@chatwoot/utils';
 
 /**
  * A composable function for report metrics calculations and display.
@@ -40,6 +40,35 @@ export function useReportMetrics(
     ].includes(key);
   };
 
+  const formatTimeInKorean = timeInSeconds => {
+    let formattedTime = '';
+    if (timeInSeconds >= 60 && timeInSeconds < 3600) {
+      const minutes = Math.floor(timeInSeconds / 60);
+      formattedTime = `${minutes} 분`;
+      const seconds = minutes === 60 ? 0 : Math.floor(timeInSeconds % 60);
+      return formattedTime + `${seconds > 0 ? ' ' + seconds + ' 초' : ''}`;
+    }
+    if (timeInSeconds >= 3600 && timeInSeconds < 86400) {
+      const hours = Math.floor(timeInSeconds / 3600);
+      formattedTime = `${hours} 시간`;
+      const minutes =
+        timeInSeconds % 3600 < 60 || hours === 24
+          ? 0
+          : Math.floor((timeInSeconds % 3600) / 60);
+      return formattedTime + `${minutes > 0 ? ' ' + minutes + ' 분' : ''}`;
+    }
+    if (timeInSeconds >= 86400) {
+      const days = Math.floor(timeInSeconds / 86400);
+      formattedTime = `${days} 일`;
+      const hours =
+        timeInSeconds % 86400 < 3600 || days >= 364
+          ? 0
+          : Math.floor((timeInSeconds % 86400) / 3600);
+      return formattedTime + `${hours > 0 ? ' ' + hours + ' 시간' : ''}`;
+    }
+    return `${Math.floor(timeInSeconds)} 초`;
+  };
+
   /**
    * Formats and displays a metric value based on its type.
    *
@@ -48,7 +77,7 @@ export function useReportMetrics(
    */
   const displayMetric = key => {
     if (isAverageMetricType(key)) {
-      return formatTime(accountSummary.value[key]);
+      return formatTimeInKorean(accountSummary.value[key]);
     }
     return Number(accountSummary.value[key] || '').toLocaleString();
   };

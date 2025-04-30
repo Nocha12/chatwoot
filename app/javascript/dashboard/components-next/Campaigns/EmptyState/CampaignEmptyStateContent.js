@@ -1,7 +1,7 @@
 export const ONGOING_CAMPAIGN_EMPTY_STATE_CONTENT = [
   {
     id: 1,
-    title: 'Chatbot Assistance',
+    title: '챗봇 서비스 지원',
     inbox: {
       id: 2,
       name: 'PaperLayer Website',
@@ -12,7 +12,8 @@ export const ONGOING_CAMPAIGN_EMPTY_STATE_CONTENT = [
       id: 1,
       name: 'Alexa Rivera',
     },
-    message: 'Hello! 👋 Need help with our chatbot features? Feel free to ask!',
+    message:
+      '안녕하세요! 새로운 챗봇 관련해 도움이 필요하시다면 저희를 찾아주세요!',
     campaign_status: 'active',
     enabled: true,
     campaign_type: 'ongoing',
@@ -26,7 +27,7 @@ export const ONGOING_CAMPAIGN_EMPTY_STATE_CONTENT = [
   },
   {
     id: 2,
-    title: 'Pricing Information Support',
+    title: '가격 정보 안내',
     inbox: {
       id: 2,
       name: 'PaperLayer Website',
@@ -37,7 +38,7 @@ export const ONGOING_CAMPAIGN_EMPTY_STATE_CONTENT = [
       id: 1,
       name: 'Jamie Lee',
     },
-    message: 'Hello! 👋 Any questions on pricing? I’m here to help!',
+    message: '새롭게 변경된 가격 정책을 확인해보세요 👋',
     campaign_status: 'active',
     enabled: false,
     campaign_type: 'ongoing',
@@ -105,7 +106,7 @@ export const ONGOING_CAMPAIGN_EMPTY_STATE_CONTENT = [
 export const ONE_OFF_CAMPAIGN_EMPTY_STATE_CONTENT = [
   {
     id: 1,
-    title: 'Customer Feedback Request',
+    title: '고객 피드백 요청 캠페인',
     inbox: {
       id: 6,
       name: 'PaperLayer Mobile',
@@ -114,7 +115,7 @@ export const ONE_OFF_CAMPAIGN_EMPTY_STATE_CONTENT = [
       provider: 'default',
     },
     message:
-      'Hello! Enjoying our product? Share your feedback on G2 and earn a $25 Amazon coupon: https://chwt.app/g2-review',
+      '안녕하세요! 저희 서비스 사용에 만족을 느끼시나요? 피드백후 다양한 해택을 받아보세요! https://chwt.app/g2-review',
     campaign_status: 'active',
     enabled: true,
     campaign_type: 'one_off',
@@ -131,7 +132,7 @@ export const ONE_OFF_CAMPAIGN_EMPTY_STATE_CONTENT = [
   },
   {
     id: 2,
-    title: 'Welcome New Customer',
+    title: '처음뵙겠습니다!',
     inbox: {
       id: 6,
       name: 'PaperLayer Mobile',
@@ -139,7 +140,8 @@ export const ONE_OFF_CAMPAIGN_EMPTY_STATE_CONTENT = [
       phone_number: '+29818373149903',
       provider: 'default',
     },
-    message: 'Welcome aboard! 🎉 Let us know if you have any questions.',
+    message:
+      '안녕하세요 저희 서비스를 찾아주셔서 감사합니다! 🎉 혹시 문의사항이 있다면 저한테 말씀해주세요!',
     campaign_status: 'completed',
     enabled: true,
     campaign_type: 'one_off',

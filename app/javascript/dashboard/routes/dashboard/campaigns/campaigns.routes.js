@@ -1,7 +1,7 @@
 import { frontendURL } from 'dashboard/helper/URLHelper.js';
 
 import CampaignsPageRouteView from './pages/CampaignsPageRouteView.vue';
-import LiveChatCampaignsPage from './pages/LiveChatCampaignsPage.vue';
+// import LiveChatCampaignsPage from './pages/LiveChatCampaignsPage.vue';
 import SMSCampaignsPage from './pages/SMSCampaignsPage.vue';
 import { FEATURE_FLAGS } from 'dashboard/featureFlags';
 
@@ -38,12 +38,12 @@ const campaignsRoutes = {
             return { name: 'campaigns_sms_index', params: to.params };
           },
         },
-        {
-          path: 'live_chat',
-          name: 'campaigns_livechat_index',
-          meta,
-          component: LiveChatCampaignsPage,
-        },
+        // {
+        //   path: 'live_chat',
+        //   name: 'campaigns_livechat_index',
+        //   meta,
+        //   component: LiveChatCampaignsPage,
+        // },
         {
           path: 'sms',
           name: 'campaigns_sms_index',

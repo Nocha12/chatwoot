@@ -391,12 +391,12 @@ const menuItems = computed(() => {
           icon: 'i-lucide-square-user',
           to: accountScopedRoute('agent_list'),
         },
-        {
-          name: 'Settings Teams',
-          label: t('SIDEBAR.TEAMS'),
-          icon: 'i-lucide-users',
-          to: accountScopedRoute('settings_teams_list'),
-        },
+        // {
+        //   name: 'Settings Teams',
+        //   label: t('SIDEBAR.TEAMS'),
+        //   icon: 'i-lucide-users',
+        //   to: accountScopedRoute('settings_teams_list'),
+        // },
         {
           name: 'Settings Inboxes',
           label: t('SIDEBAR.INBOXES'),
@@ -409,12 +409,12 @@ const menuItems = computed(() => {
           icon: 'i-lucide-tags',
           to: accountScopedRoute('labels_list'),
         },
-        {
-          name: 'Settings Custom Attributes',
-          label: t('SIDEBAR.CUSTOM_ATTRIBUTES'),
-          icon: 'i-lucide-code',
-          to: accountScopedRoute('attributes_list'),
-        },
+        // {
+        //   name: 'Settings Custom Attributes',
+        //   label: t('SIDEBAR.CUSTOM_ATTRIBUTES'),
+        //   icon: 'i-lucide-code',
+        //   to: accountScopedRoute('attributes_list'),
+        // },
         {
           name: 'Settings Automation',
           label: t('SIDEBAR.AUTOMATION'),

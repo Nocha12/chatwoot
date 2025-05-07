@@ -1,9 +1,9 @@
-import ar from './locale/ar';
-import ca from './locale/ca';
-import cs from './locale/cs';
-import da from './locale/da';
-import de from './locale/de';
-import el from './locale/el';
+// import ar from './locale/ar';
+// import ca from './locale/ca';
+// import cs from './locale/cs';
+// import da from './locale/da';
+// import de from './locale/de';
+// import el from './locale/el';
 import en from './locale/en';
 // import es from './locale/es';
 // import fa from './locale/fa';

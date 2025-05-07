@@ -6,21 +6,21 @@ import Index from './Index.vue';
 
 import AgentReportsIndex from './AgentReportsIndex.vue';
 import InboxReportsIndex from './InboxReportsIndex.vue';
-import TeamReportsIndex from './TeamReportsIndex.vue';
+// import TeamReportsIndex from './TeamReportsIndex.vue';
 
 import AgentReportsShow from './AgentReportsShow.vue';
 import InboxReportsShow from './InboxReportsShow.vue';
-import TeamReportsShow from './TeamReportsShow.vue';
+// import TeamReportsShow from './TeamReportsShow.vue';
 
 import AgentReports from './AgentReports.vue';
 import InboxReports from './InboxReports.vue';
 import LabelReports from './LabelReports.vue';
-import TeamReports from './TeamReports.vue';
+// import TeamReports from './TeamReports.vue';
 
-import CsatResponses from './CsatResponses.vue';
-import BotReports from './BotReports.vue';
+// import CsatResponses from './CsatResponses.vue';
+// import BotReports from './BotReports.vue';
 import LiveReports from './LiveReports.vue';
-import SLAReports from './SLAReports.vue';
+// import SLAReports from './SLAReports.vue';
 
 const meta = {
   featureFlag: FEATURE_FLAGS.REPORTS,
@@ -46,12 +46,12 @@ const oldReportRoutes = [
     meta,
     component: LabelReports,
   },
-  {
-    path: 'teams',
-    name: 'team_reports',
-    meta,
-    component: TeamReports,
-  },
+  // {
+  //   path: 'teams',
+  //   name: 'team_reports',
+  //   meta,
+  //   component: TeamReports,
+  // },
 ];
 
 const revisedReportRoutes = [
@@ -88,22 +88,22 @@ const revisedReportRoutes = [
     },
     component: InboxReportsShow,
   },
-  {
-    path: 'teams_overview',
-    name: 'team_reports_index',
-    meta: {
-      permissions: ['administrator', 'report_manage'],
-    },
-    component: TeamReportsIndex,
-  },
-  {
-    path: 'teams/:id',
-    name: 'team_reports_show',
-    meta: {
-      permissions: ['administrator', 'report_manage'],
-    },
-    component: TeamReportsShow,
-  },
+  // {
+  //   path: 'teams_overview',
+  //   name: 'team_reports_index',
+  //   meta: {
+  //     permissions: ['administrator', 'report_manage'],
+  //   },
+  //   component: TeamReportsIndex,
+  // },
+  // {
+  //   path: 'teams/:id',
+  //   name: 'team_reports_show',
+  //   meta: {
+  //     permissions: ['administrator', 'report_manage'],
+  //   },
+  //   component: TeamReportsShow,
+  // },
 ];
 
 export default {
@@ -132,24 +132,24 @@ export default {
         },
         ...oldReportRoutes,
         ...revisedReportRoutes,
-        {
-          path: 'sla',
-          name: 'sla_reports',
-          meta,
-          component: SLAReports,
-        },
-        {
-          path: 'csat',
-          name: 'csat_reports',
-          meta,
-          component: CsatResponses,
-        },
-        {
-          path: 'bot',
-          name: 'bot_reports',
-          meta,
-          component: BotReports,
-        },
+        // {
+        //   path: 'sla',
+        //   name: 'sla_reports',
+        //   meta,
+        //   component: SLAReports,
+        // },
+        // {
+        //   path: 'csat',
+        //   name: 'csat_reports',
+        //   meta,
+        //   component: CsatResponses,
+        // },
+        // {
+        //   path: 'bot',
+        //   name: 'bot_reports',
+        //   meta,
+        //   component: BotReports,
+        // },
       ],
     },
   ],

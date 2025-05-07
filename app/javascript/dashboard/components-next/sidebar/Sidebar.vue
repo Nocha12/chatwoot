@@ -95,12 +95,12 @@ const newReportRoutes = () => [
     to: accountScopedRoute('inbox_reports_index'),
     activeOn: ['inbox_reports_show'],
   },
-  {
-    name: 'Reports Team',
-    label: t('SIDEBAR.REPORTS_TEAM'),
-    to: accountScopedRoute('team_reports_index'),
-    activeOn: ['team_reports_show'],
-  },
+  // {
+  //   name: 'Reports Team',
+  //   label: t('SIDEBAR.REPORTS_TEAM'),
+  //   to: accountScopedRoute('team_reports_index'),
+  //   activeOn: ['team_reports_show'],
+  // },
 ];
 
 const reportRoutes = computed(() => newReportRoutes());
@@ -198,28 +198,28 @@ const menuItems = computed(() => {
         },
       ],
     },
-    {
-      name: 'Captain',
-      icon: 'i-woot-captain',
-      label: t('SIDEBAR.CAPTAIN'),
-      children: [
-        {
-          name: 'Assistants',
-          label: t('SIDEBAR.CAPTAIN_ASSISTANTS'),
-          to: accountScopedRoute('captain_assistants_index'),
-        },
-        {
-          name: 'Documents',
-          label: t('SIDEBAR.CAPTAIN_DOCUMENTS'),
-          to: accountScopedRoute('captain_documents_index'),
-        },
-        {
-          name: 'Responses',
-          label: t('SIDEBAR.CAPTAIN_RESPONSES'),
-          to: accountScopedRoute('captain_responses_index'),
-        },
-      ],
-    },
+    // {
+    //   name: 'Captain',
+    //   icon: 'i-woot-captain',
+    //   label: t('SIDEBAR.CAPTAIN'),
+    //   children: [
+    //     {
+    //       name: 'Assistants',
+    //       label: t('SIDEBAR.CAPTAIN_ASSISTANTS'),
+    //       to: accountScopedRoute('captain_assistants_index'),
+    //     },
+    //     {
+    //       name: 'Documents',
+    //       label: t('SIDEBAR.CAPTAIN_DOCUMENTS'),
+    //       to: accountScopedRoute('captain_documents_index'),
+    //     },
+    //     {
+    //       name: 'Responses',
+    //       label: t('SIDEBAR.CAPTAIN_RESPONSES'),
+    //       to: accountScopedRoute('captain_responses_index'),
+    //     },
+    //   ],
+    // },
     {
       name: 'Contacts',
       label: t('SIDEBAR.CONTACTS'),
@@ -293,21 +293,21 @@ const menuItems = computed(() => {
           to: accountScopedRoute('conversation_reports'),
         },
         ...reportRoutes.value,
-        {
-          name: 'Reports CSAT',
-          label: t('SIDEBAR.CSAT'),
-          to: accountScopedRoute('csat_reports'),
-        },
-        {
-          name: 'Reports SLA',
-          label: t('SIDEBAR.REPORTS_SLA'),
-          to: accountScopedRoute('sla_reports'),
-        },
-        {
-          name: 'Reports Bot',
-          label: t('SIDEBAR.REPORTS_BOT'),
-          to: accountScopedRoute('bot_reports'),
-        },
+        // {
+        //   name: 'Reports CSAT',
+        //   label: t('SIDEBAR.CSAT'),
+        //   to: accountScopedRoute('csat_reports'),
+        // },
+        // {
+        //   name: 'Reports SLA',
+        //   label: t('SIDEBAR.REPORTS_SLA'),
+        //   to: accountScopedRoute('sla_reports'),
+        // },
+        // {
+        //   name: 'Reports Bot',
+        //   label: t('SIDEBAR.REPORTS_BOT'),
+        //   to: accountScopedRoute('bot_reports'),
+        // },
       ],
     },
     {

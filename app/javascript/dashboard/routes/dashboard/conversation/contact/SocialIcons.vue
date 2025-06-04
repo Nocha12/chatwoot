@@ -1,5 +1,8 @@
 <script>
+import Icon from 'dashboard/components-next/icon/Icon.vue';
+
 export default {
+  components: { Icon },
   props: {
     socialProfiles: {
       type: Object,
@@ -9,12 +12,13 @@ export default {
   data() {
     return {
       socialMediaLinks: [
-        { key: 'facebook', icon: 'facebook', link: 'https://facebook.com/' },
-        { key: 'twitter', icon: 'twitter', link: 'https://twitter.com/' },
-        { key: 'linkedin', icon: 'linkedin', link: 'https://linkedin.com/' },
-        { key: 'github', icon: 'github', link: 'https://github.com/' },
-        { key: 'instagram', icon: 'instagram', link: 'https://instagram.com/' },
-        { key: 'telegram', icon: 'telegram', link: 'https://t.me/' },
+        { key: 'facebook', icon: 'i-ri-facebook-circle-fill', link: 'https://facebook.com/' },
+        { key: 'twitter', icon: 'i-ri-twitter-x-fill', link: 'https://twitter.com/' },
+        { key: 'linkedin', icon: 'i-ri-linkedin-box-fill', link: 'https://linkedin.com/' },
+        { key: 'github', icon: 'i-ri-github-fill', link: 'https://github.com/' },
+        { key: 'instagram', icon: 'i-ri-instagram-line', link: 'https://instagram.com/' },
+        { key: 'tiktok', icon: 'i-ri-tiktok-fill', link: 'https://tiktok.com/@' },
+        { key: 'telegram', icon: 'i-ri-telegram-fill', link: 'https://t.me/' },
       ],
     };
   },
@@ -38,9 +42,8 @@ export default {
       target="_blank"
       rel="noopener noreferrer nofollow"
     >
-      <fluent-icon
-        :icon="`brand-${profile.key}`"
-        size="16"
+      <Icon
+        :icon="profile.icon"
         class="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200"
       />
     </a>

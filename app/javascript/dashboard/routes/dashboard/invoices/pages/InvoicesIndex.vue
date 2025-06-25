@@ -7,7 +7,7 @@ import { debounce } from '@chatwoot/utils';
 import { useUISettings } from 'dashboard/composables/useUISettings';
 
 import ContactsListLayout from 'dashboard/components-next/Contacts/ContactsListLayout.vue';
-import ContactsList from 'dashboard/components-next/Contacts/Pages/ContactsList.vue';
+import InvoicesList from 'dashboard/components-next/Invoices/Pages/InvoicesList.vue';
 import Spinner from 'dashboard/components-next/spinner/Spinner.vue';
 
 const DEFAULT_SORT_FIELD = 'created_at';
@@ -162,7 +162,7 @@ onMounted(async () => {
           </span>
         </div>
 
-        <ContactsList v-else :contacts="invoices" />
+        <InvoicesList v-else :invoices="invoices" />
       </template>
     </ContactsListLayout>
   </div>

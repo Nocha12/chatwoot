@@ -136,6 +136,10 @@
         "GITHUB": {
           "PLACEHOLDER": "깃허브 사용자 이름 입력",
           "LABEL": "깃허브"
+        },
+        "TIKTOK": {
+          "PLACEHOLDER": "TikTok 추가",
+          "LABEL": "TikTok"
         }
       }
     },
@@ -455,6 +459,9 @@
           },
           "TWITTER": {
             "PLACEHOLDER": "Add Twitter"
+          },
+          "TIKTOK": {
+            "PLACEHOLDER": "TikTok 추가"
           }
         }
       }

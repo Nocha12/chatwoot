@@ -136,6 +136,10 @@
         "GITHUB": {
           "PLACEHOLDER": "Enter the Github username",
           "LABEL": "Github"
+        },
+        "TIKTOK": {
+          "PLACEHOLDER": "Add TikTok",
+          "LABEL": "TikTok"
         }
       }
     },
@@ -456,6 +460,9 @@
           },
           "TWITTER": {
             "PLACEHOLDER": "Add Twitter"
+          },
+          "TIKTOK": {
+            "PLACEHOLDER": "Add TikTok"
           }
         }
       }

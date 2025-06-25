@@ -54,12 +54,14 @@ export default {
         twitter: '',
         linkedin: '',
         github: '',
+        tiktok: '',
       },
       socialProfileKeys: [
         { key: 'facebook', prefixURL: 'https://facebook.com/' },
         { key: 'twitter', prefixURL: 'https://twitter.com/' },
         { key: 'linkedin', prefixURL: 'https://linkedin.com/' },
         { key: 'github', prefixURL: 'https://github.com/' },
+        { key: 'tiktok', prefixURL: 'https://tiktok.com/' },
       ],
     };
   },
@@ -171,6 +173,7 @@ export default {
         linkedin: socialProfiles.linkedin || '',
         github: socialProfiles.github || '',
         instagram: socialProfiles.instagram || '',
+        tiktok: socialProfiles.tiktok || '',
       };
     },
     getContactObject() {

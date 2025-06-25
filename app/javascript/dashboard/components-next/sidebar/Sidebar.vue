@@ -469,6 +469,12 @@ const menuItems = computed(() => {
           icon: 'i-lucide-credit-card',
           to: accountScopedRoute('billing_settings_index'),
         },
+        {
+          name: 'Settings Invoices',
+          label: t('SIDEBAR.INVOICES'),
+          icon: 'i-lucide-file-text',
+          to: accountScopedRoute('invoices_dashboard_index'),
+        },
       ],
     },
   ];

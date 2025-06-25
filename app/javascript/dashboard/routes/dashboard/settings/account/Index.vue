@@ -36,6 +36,8 @@ export default {
       locale: 'en',
       domain: '',
       supportEmail: '',
+      instagramId: '',
+      tiktokId: '',
       features: {},
       autoResolveDuration: null,
       latestChatwootVersion: null,
@@ -151,6 +153,7 @@ export default {
           features,
           auto_resolve_duration,
           latest_chatwoot_version: latestChatwootVersion,
+          custom_attributes: customAttributes = {},
         } = this.getAccount(this.accountId);
 
         this.$root.$i18n.locale = locale;
@@ -159,6 +162,8 @@ export default {
         this.id = id;
         this.domain = domain;
         this.supportEmail = support_email;
+        this.instagramId = customAttributes.instagram_id || '';
+        this.tiktokId = customAttributes.tiktok_id || '';
         this.features = features;
         this.autoResolveDuration = auto_resolve_duration;
         this.latestChatwootVersion = latestChatwootVersion;
@@ -180,6 +185,8 @@ export default {
           domain: this.domain,
           support_email: this.supportEmail,
           auto_resolve_duration: this.autoResolveDuration,
+          instagram_id: this.instagramId,
+          tiktok_id: this.tiktokId,
         });
         this.$root.$i18n.locale = this.locale;
         this.getAccount(this.id).locale = this.locale;
@@ -324,6 +331,24 @@ export default {
                 :placeholder="
                   $t('GENERAL_SETTINGS.FORM.SUPPORT_EMAIL.PLACEHOLDER')
                 "
+              />
+            </label>
+            <label>
+              {{ $t('GENERAL_SETTINGS.FORM.INSTAGRAM_ID.LABEL') }}
+              <input
+                v-model="instagramId"
+                type="text"
+                :placeholder="
+                  $t('GENERAL_SETTINGS.FORM.INSTAGRAM_ID.PLACEHOLDER')
+                "
+              />
+            </label>
+            <label>
+              {{ $t('GENERAL_SETTINGS.FORM.TIKTOK_ID.LABEL') }}
+              <input
+                v-model="tiktokId"
+                type="text"
+                :placeholder="$t('GENERAL_SETTINGS.FORM.TIKTOK_ID.PLACEHOLDER')"
               />
             </label>
             <label

@@ -9,6 +9,8 @@ if resource.custom_attributes.present?
     json.industry resource.custom_attributes['industry'] if resource.custom_attributes['industry'].present?
     json.company_size resource.custom_attributes['company_size'] if resource.custom_attributes['company_size'].present?
     json.timezone resource.custom_attributes['timezone'] if resource.custom_attributes['timezone'].present?
+    json.instagram_id resource.custom_attributes['instagram_id'] if resource.custom_attributes['instagram_id'].present?
+    json.tiktok_id resource.custom_attributes['tiktok_id'] if resource.custom_attributes['tiktok_id'].present?
     json.logo resource.custom_attributes['logo'] if resource.custom_attributes['logo'].present?
     json.onboarding_step resource.custom_attributes['onboarding_step'] if resource.custom_attributes['onboarding_step'].present?
     json.marked_for_deletion_at resource.custom_attributes['marked_for_deletion_at'] if resource.custom_attributes['marked_for_deletion_at'].present?

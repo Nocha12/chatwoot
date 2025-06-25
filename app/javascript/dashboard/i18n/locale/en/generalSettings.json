@@ -64,6 +64,16 @@
         "PLACEHOLDER": "Your company's support email",
         "ERROR": ""
       },
+      "INSTAGRAM_ID": {
+        "LABEL": "Instagram ID",
+        "PLACEHOLDER": "Your Instagram username",
+        "ERROR": ""
+      },
+      "TIKTOK_ID": {
+        "LABEL": "TikTok ID",
+        "PLACEHOLDER": "Your TikTok username",
+        "ERROR": ""
+      },
       "AUTO_RESOLVE_DURATION": {
         "LABEL": "Number of days after a ticket should auto resolve if there is no activity",
         "PLACEHOLDER": "30",

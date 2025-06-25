@@ -87,7 +87,8 @@ class Api::V1::AccountsController < Api::BaseController
   end
 
   def custom_attributes_params
-    params.permit(:industry, :company_size, :timezone)
+    #     params.permit(:industry, :company_size, :timezone)
+    params.permit(:industry, :company_size, :timezone, :instagram_id, :tiktok_id)
   end
 
   def check_signup_enabled

@@ -64,7 +64,8 @@ Rails.application.configure do
   config.hosts = nil
 
   # customize using the environment variables
-  config.log_level = ENV.fetch('LOG_LEVEL', 'debug').to_sym
+#   config.log_level = ENV.fetch('LOG_LEVEL', 'debug').to_sym
+  config.log_level = :unknown
 
   # Use a different logger for distributed setups.
   # require 'syslog/logger'

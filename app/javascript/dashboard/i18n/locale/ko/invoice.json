@@ -1,0 +1,19 @@
+{
+  "INVOICES_LAYOUT": {
+    "HEADER": {
+      "TITLE": "Invoices",
+      "SEARCH_TITLE": "Search invoices",
+      "SEARCH_PLACEHOLDER": "Search...",
+      "BREADCRUMB": {
+        "INVOICES": "Invoices"
+      }
+    },
+    "EMPTY_STATE": {
+      "TITLE": "No invoices found in this account",
+      "SUBTITLE": "Start adding new invoices by clicking on the button below",
+      "BUTTON_LABEL": "Add invoice",
+      "SEARCH_EMPTY_STATE_TITLE": "No invoices match your search \uD83D\uDD0D",
+      "LIST_EMPTY_STATE_TITLE": "No invoices available in this view \uD83D\uDCCB"
+    }
+  }
+}

@@ -41,12 +41,12 @@ const FORM_CONFIG = {
 };
 
 const SOCIAL_CONFIG = {
-  LINKEDIN: 'i-ri-linkedin-box-fill',
-  FACEBOOK: 'i-ri-facebook-circle-fill',
+  // LINKEDIN: 'i-ri-linkedin-box-fill',
+  // FACEBOOK: 'i-ri-facebook-circle-fill',
   INSTAGRAM: 'i-ri-instagram-line',
-  TWITTER: 'i-ri-twitter-x-fill',
-  TIKTOK: 'i-ri-instagram-line',
-  GITHUB: 'i-ri-github-fill',
+  // TWITTER: 'i-ri-twitter-x-fill',
+  TIKTOK: 'i-ri-tiktok-line',
+  // GITHUB: 'i-ri-github-fill',
 };
 
 const defaultState = {

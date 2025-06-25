@@ -45,6 +45,7 @@ const SOCIAL_CONFIG = {
   FACEBOOK: 'i-ri-facebook-circle-fill',
   INSTAGRAM: 'i-ri-instagram-line',
   TWITTER: 'i-ri-twitter-x-fill',
+  TIKTOK: 'i-ri-instagram-line',
   GITHUB: 'i-ri-github-fill',
 };
 
@@ -67,6 +68,7 @@ const defaultState = {
       instagram: '',
       linkedin: '',
       twitter: '',
+      tiktok: '',
     },
   },
 };

@@ -50,6 +50,13 @@ const primaryMenuItems = accountId => [
     toStateName: 'campaigns_ongoing_index',
   },
   {
+    icon: 'document-outline',
+    key: 'invoices',
+    label: 'INVOICES',
+    toState: frontendURL(`accounts/${accountId}/invoices`),
+    toStateName: 'invoices_dashboard_index',
+  },
+  {
     icon: 'library',
     key: 'helpcenter',
     label: 'HELP_CENTER.TITLE',

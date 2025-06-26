@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2025_04_18_123456) do
+ActiveRecord::Schema[7.0].define(version: 2025_04_28_130755) do
   # These extensions should be enabled to support this database
   enable_extension "pg_stat_statements"
   enable_extension "pg_trgm"
@@ -75,7 +75,7 @@ ActiveRecord::Schema[7.0].define(version: 2025_04_18_123456) do
     t.string "record_type", null: false
     t.bigint "record_id", null: false
     t.bigint "blob_id", null: false
-    t.datetime "created_at", precision: nil, null: false
+    t.datetime "created_at", null: false
     t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
@@ -85,10 +85,10 @@ ActiveRecord::Schema[7.0].define(version: 2025_04_18_123456) do
     t.string "filename", null: false
     t.string "content_type"
     t.text "metadata"
+    t.string "service_name", null: false
     t.bigint "byte_size", null: false
     t.string "checksum"
-    t.datetime "created_at", precision: nil, null: false
-    t.string "service_name", null: false
+    t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
@@ -731,6 +731,17 @@ ActiveRecord::Schema[7.0].define(version: 2025_04_18_123456) do
     t.jsonb "settings", default: {}
   end
 
+  create_table "invoices", force: :cascade do |t|
+    t.bigint "account_id", null: false
+    t.string "number"
+    t.decimal "total"
+    t.string "status"
+    t.jsonb "additional_attributes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["account_id"], name: "index_invoices_on_account_id"
+  end
+
   create_table "labels", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -1072,17 +1083,6 @@ ActiveRecord::Schema[7.0].define(version: 2025_04_18_123456) do
     t.boolean "open_all_day", default: false
     t.index ["account_id"], name: "index_working_hours_on_account_id"
     t.index ["inbox_id"], name: "index_working_hours_on_inbox_id"
-  end
-
-  create_table "invoices", force: :cascade do |t|
-    t.bigint "account_id", null: false
-    t.string "number"
-    t.decimal "total"
-    t.string "status"
-    t.jsonb "additional_attributes"
-    t.datetime "created_at", precision: nil, null: false
-    t.datetime "updated_at", precision: nil, null: false
-    t.index ["account_id"], name: "index_invoices_on_account_id"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

@@ -9,7 +9,5 @@ class CreateInvoices < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
-
-    add_index :invoices, :account_id
   end
 end

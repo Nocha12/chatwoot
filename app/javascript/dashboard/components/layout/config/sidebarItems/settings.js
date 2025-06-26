@@ -10,7 +10,6 @@ const settings = accountId => ({
     'automation_list',
     'auditlogs_list',
     'billing_settings_index',
-    'invoices_dashboard_index',
     'canned_list',
     'general_settings_index',
     'general_settings',
@@ -214,16 +213,6 @@ const settings = accountId => ({
       toState: frontendURL(`accounts/${accountId}/settings/billing`),
       toStateName: 'billing_settings_index',
       showOnlyOnCloud: true,
-    },
-    {
-      icon: 'document-outline',
-      label: 'INVOICES',
-      hasSubMenu: false,
-      meta: {
-        permissions: ['administrator', 'agent'],
-      },
-      toState: frontendURL(`accounts/${accountId}/invoices`),
-      toStateName: 'invoices_dashboard_index',
     },
   ],
 });

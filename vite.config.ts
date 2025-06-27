@@ -44,6 +44,12 @@ if (isLibraryMode) {
 
 export default defineConfig({
   plugins: plugins,
+  server: {
+    hmr: {
+      port: 3036,
+      host: 'localhost',
+    },
+  },
   build: {
     rollupOptions: {
       output: {

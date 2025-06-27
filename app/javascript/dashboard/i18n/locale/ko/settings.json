@@ -344,6 +344,10 @@
     },
     "DOCS": "문서 읽기"
   },
+  "INVOICE_CARD": {
+    "ADDITIONAL_INFO": "추가 정보",
+    "NO_DETAILS": "세부 정보가 없습니다."
+  },
   "BILLING_SETTINGS": {
     "TITLE": "청구",
     "DESCRIPTION": "구독을 관리하고 플랜을 업그레이드하여 팀에 더 많은 기능을 제공하세요.",

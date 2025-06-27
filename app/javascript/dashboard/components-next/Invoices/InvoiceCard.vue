@@ -1,16 +1,19 @@
 <script setup>
-import CardLayout from 'dashboard/components-next/CardLayout.vue';
-import Button from 'dashboard/components-next/button/Button.vue';
-
-const props = defineProps({
+defineProps({
   id: { type: Number, required: true },
   invoiceNumber: { type: String, default: '' },
   total: { type: [Number, String], default: '' },
   status: { type: String, default: '' },
   isExpanded: { type: Boolean, default: false },
+  details: { type: Object, default: () => ({}) },
 });
-
 const emit = defineEmits(['toggle']);
+import { useI18n } from 'vue-i18n';
+
+import CardLayout from 'dashboard/components-next/CardLayout.vue';
+
+import Button from 'dashboard/components-next/button/Button.vue';
+const { t } = useI18n();
 
 const onClickExpand = () => emit('toggle');
 </script>
@@ -56,7 +59,33 @@ const onClickExpand = () => emit('toggle');
       >
         <div v-show="isExpanded" class="w-full">
           <div class="flex flex-col gap-6 p-6 border-t border-n-strong">
-            <slot name="details">세부 정보</slot>
+            <slot name="details">
+              <!-- Excel 업로드에서 가져온 추가 데이터 표시 -->
+              <div v-if="Object.keys(details).length > 0" class="space-y-3">
+                <h4 class="text-sm font-semibold text-n-slate-12">
+                  {{ t('INVOICE_CARD.ADDITIONAL_INFO') }}
+                </h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <div
+                    v-for="(value, key) in details"
+                    :key="key"
+                    class="flex flex-col gap-1"
+                  >
+                    <span
+                      class="text-xs font-medium text-n-slate-10 uppercase tracking-wide"
+                    >
+                      {{ key }}
+                    </span>
+                    <span class="text-sm text-n-slate-11">
+                      {{ value || '-' }}
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div v-else class="text-sm text-n-slate-11">
+                {{ t('INVOICE_CARD.NO_DETAILS') }}
+              </div>
+            </slot>
           </div>
         </div>
       </transition>

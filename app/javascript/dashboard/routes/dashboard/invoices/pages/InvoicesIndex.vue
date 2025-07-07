@@ -48,6 +48,11 @@ const sortState = reactive({
   activeOrdering: initialOrder,
 });
 const excelInvoices = ref([]);
+const selectedSheetIndex = ref(0);
+const showSidebar = computed(() => excelInvoices.value.length > 0);
+const selectedInvoice = computed(
+  () => excelInvoices.value[selectedSheetIndex.value] || null
+);
 
 const isFetchingList = computed(() => uiFlags.value.isFetching);
 const currentPage = computed(() => Number(meta.value?.currentPage));
@@ -136,36 +141,58 @@ const handleFileChange = async event => {
 
   const data = await file.arrayBuffer();
   const workbook = read(data, { type: 'array' });
-  const sheetName = workbook.SheetNames[workbook.SheetNames.length - 1];
-  const worksheet = workbook.Sheets[sheetName];
-  if (!worksheet) {
-    return;
-  }
 
-  const jsonData = utils.sheet_to_json(worksheet, { header: 1 });
-  if (jsonData.length > 0) {
-    const headers = jsonData[1];
-    const rows = jsonData.slice(2);
-    // Excel 데이터를 Invoice 형태로 변환
-    const convertedInvoices = rows.map((row, index) => {
-      const details = {};
-      headers.forEach((header, headerIndex) => {
-        if (header && row[headerIndex] !== undefined) {
-          details[header] = row[headerIndex];
-        }
+  // 모든 시트를 순회하면서 각 시트마다 하나의 InvoiceCard 생성
+  const convertedSheets = workbook.SheetNames.filter(name =>
+    name.endsWith('프린트')
+  )
+    .map((sheetName, sheetIndex) => {
+      const worksheet = workbook.Sheets[sheetName];
+      if (!worksheet) return null;
+
+      const jsonData = utils.sheet_to_json(worksheet, { header: 1 });
+
+      if (jsonData.length <= 1) {
+        return {
+          id: `sheet-${sheetIndex}`,
+          title: sheetName,
+          invoices: [],
+        };
+      }
+
+      const headers = jsonData[1];
+      const rows = jsonData.slice(2);
+
+      // 각 데이터 행을 개별 InvoiceCard로 변환
+      const rowInvoices = rows.map((row, rowIndex) => {
+        const details = {};
+        headers.forEach((header, headerIndex) => {
+          const value = row[headerIndex];
+          details[header] = value;
+        });
+
+        return {
+          id: `${sheetIndex}-${rowIndex}`,
+          // title: `${t('INVOICE_CARD.ROW_DATA')} ${rowIndex + 1}`,
+          title: `${details['아이디']}, ${details['상품명']}`,
+          details,
+        };
       });
 
       return {
-        id: index + 1,
-        invoiceNumber: row[0] || `INV-${String(index + 1).padStart(3, '0')}`,
-        total: row[1] || '',
-        status: row[2] || '대기중',
-        details,
+        id: `sheet-${sheetIndex}`,
+        title: sheetName,
+        invoices: rowInvoices,
       };
-    });
+    })
+    .filter(Boolean); // null 값 제거
 
-    excelInvoices.value = convertedInvoices;
-  }
+  excelInvoices.value = convertedSheets;
+  selectedSheetIndex.value = 0; // 첫 번째 시트를 기본 선택
+};
+
+const selectSheet = index => {
+  selectedSheetIndex.value = index;
 };
 </script>
 
@@ -186,7 +213,12 @@ const handleFileChange = async event => {
       @search="searchInvoices"
       @update:sort="handleSort"
     >
-      <input type="file" accept=".xlsx,.xls" @change="handleFileChange" />
+      <input
+        v-if="excelInvoices.length === 0"
+        type="file"
+        accept=".xlsx,.xls"
+        @change="handleFileChange"
+      />
       <div
         v-if="isFetchingList"
         class="flex items-center justify-center py-10 text-n-slate-11"
@@ -205,10 +237,45 @@ const handleFileChange = async event => {
           </span>
         </div>
 
-        <InvoicesList
-          v-else
-          :invoices="excelInvoices.length > 0 ? excelInvoices : invoices"
-        />
+        <!-- Excel 시트가 있을 때 사이드바와 메인 콘텐츠 -->
+        <div v-else-if="showSidebar" class="flex h-full">
+          <!-- 왼쪽 사이드바 - 시트 목록 -->
+          <div
+            class="w-64 bg-n-background border-r border-n-border flex-shrink-0"
+          >
+            <div class="p-4">
+              <h3 class="text-sm font-semibold text-n-slate-12 mb-3">
+                {{ t('INVOICE_SIDEBAR.SHEETS_TITLE') }}
+              </h3>
+              <ul class="space-y-1">
+                <li v-for="(invoice, index) in excelInvoices" :key="invoice.id">
+                  <button
+                    class="w-full text-left px-3 py-2 rounded-md text-sm transition-colors"
+                    :class="[
+                      selectedSheetIndex === index
+                        ? 'bg-n-blue-6 text-white'
+                        : 'text-n-slate-11 hover:bg-n-base hover:text-n-slate-12',
+                    ]"
+                    @click="selectSheet(index)"
+                  >
+                    {{ invoice.title }}
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 오른쪽 메인 콘텐츠 - 선택된 시트 정보 -->
+          <div class="flex-1 overflow-auto">
+            <InvoicesList
+              v-if="selectedInvoice && selectedInvoice.invoices"
+              :invoices="selectedInvoice.invoices"
+            />
+          </div>
+        </div>
+
+        <!-- 일반 인보이스 목록 (Excel이 아닌 경우) -->
+        <InvoicesList v-else :invoices="invoices" />
       </template>
     </ContactsListLayout>
   </div>

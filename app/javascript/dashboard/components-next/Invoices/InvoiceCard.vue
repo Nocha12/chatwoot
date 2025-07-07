@@ -1,11 +1,13 @@
 <script setup>
 defineProps({
   id: { type: Number, required: true },
+  title: { type: String, default: '' },
   invoiceNumber: { type: String, default: '' },
   total: { type: [Number, String], default: '' },
   status: { type: String, default: '' },
   isExpanded: { type: Boolean, default: false },
   details: { type: Object, default: () => ({}) },
+  tableData: { type: Object, default: null },
 });
 const emit = defineEmits(['toggle']);
 import { useI18n } from 'vue-i18n';
@@ -24,14 +26,17 @@ const onClickExpand = () => emit('toggle');
       <div class="flex flex-col gap-0.5 flex-1">
         <div class="flex flex-wrap items-center gap-x-4 gap-y-1">
           <span class="text-base font-medium truncate text-n-slate-12">
-            {{ invoiceNumber }}
+            {{ title || invoiceNumber }}
           </span>
         </div>
-        <div class="flex flex-wrap items-center justify-start gap-x-3 gap-y-1">
+        <div
+          v-if="total || status"
+          class="flex flex-wrap items-center justify-start gap-x-3 gap-y-1"
+        >
           <span v-if="total" class="text-sm truncate text-n-slate-11">
             {{ total }}
           </span>
-          <div v-if="total" class="w-px h-3 truncate bg-n-slate-6" />
+          <div v-if="total && status" class="w-px h-3 truncate bg-n-slate-6" />
           <span v-if="status" class="text-sm truncate text-n-slate-11">
             {{ status }}
           </span>
@@ -60,8 +65,63 @@ const onClickExpand = () => emit('toggle');
         <div v-show="isExpanded" class="w-full">
           <div class="flex flex-col gap-6 p-6 border-t border-n-strong">
             <slot name="details">
-              <!-- Excel 업로드에서 가져온 추가 데이터 표시 -->
-              <div v-if="Object.keys(details).length > 0" class="space-y-3">
+              <!-- 테이블 데이터가 있을 때 표로 표시 -->
+              <div
+                v-if="tableData && tableData.headers && tableData.rows"
+                class="space-y-3"
+              >
+                <h4 class="text-sm font-semibold text-n-slate-12">
+                  {{ t('INVOICE_CARD.TABLE_DATA') }}
+                </h4>
+                <div class="overflow-x-auto">
+                  <table class="w-full border border-n-border rounded-lg">
+                    <!-- 헤더 -->
+                    <thead class="bg-n-base border-b border-n-border">
+                      <tr>
+                        <th
+                          v-for="(header, index) in tableData.headers"
+                          :key="index"
+                          class="px-3 py-2 text-left text-xs font-medium text-n-slate-10 uppercase tracking-wide"
+                        >
+                          {{ header }}
+                        </th>
+                      </tr>
+                    </thead>
+                    <!-- 데이터 행들 -->
+                    <tbody class="divide-y divide-n-border">
+                      <tr
+                        v-for="(row, rowIndex) in tableData.rows"
+                        :key="rowIndex"
+                        class="hover:bg-n-base transition-colors"
+                      >
+                        <td
+                          v-for="(cell, cellIndex) in row"
+                          :key="cellIndex"
+                          class="px-3 py-2 text-sm text-n-slate-10 bg-transparent whitespace-nowrap"
+                        >
+                          {{ cell || '-' }}
+                        </td>
+                        <!-- 행에 빈 셀이 있는 경우 헤더 수만큼 채우기 -->
+                        <td
+                          v-for="index in Math.max(
+                            0,
+                            tableData.headers.length - row.length
+                          )"
+                          :key="`empty-${index}`"
+                          class="px-3 py-2 text-sm text-n-slate-10 bg-transparent whitespace-nowrap"
+                        >
+                          -
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- 기존 details 표시 -->
+              <div
+                v-else-if="Object.keys(details).length > 0"
+                class="space-y-3"
+              >
                 <h4 class="text-sm font-semibold text-n-slate-12">
                   {{ t('INVOICE_CARD.ADDITIONAL_INFO') }}
                 </h4>

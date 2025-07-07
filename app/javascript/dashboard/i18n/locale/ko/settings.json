@@ -346,7 +346,16 @@
   },
   "INVOICE_CARD": {
     "ADDITIONAL_INFO": "추가 정보",
-    "NO_DETAILS": "세부 정보가 없습니다."
+    "NO_DETAILS": "세부 정보가 없습니다.",
+    "TABLE_DATA": "표 데이터",
+    "ROW_DATA": "행 데이터"
+  },
+  "INVOICE_SEARCH": {
+    "PLACEHOLDER": "카드 검색...",
+    "NO_RESULTS": "검색 결과가 없습니다."
+  },
+  "INVOICE_SIDEBAR": {
+    "SHEETS_TITLE": "시트 목록"
   },
   "BILLING_SETTINGS": {
     "TITLE": "청구",

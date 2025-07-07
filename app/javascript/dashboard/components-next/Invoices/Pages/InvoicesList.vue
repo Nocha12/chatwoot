@@ -18,7 +18,13 @@ const updateQuery = debounce(value => {
   searchQuery.value = value;
 }, 200);
 
-watch(searchInput, updateQuery);
+watch(searchInput, value => {
+  if (!value.trim()) {
+    searchQuery.value = '';
+  } else {
+    updateQuery(value);
+  }
+});
 
 const toggleExpanded = id => {
   expandedCardId.value = expandedCardId.value === id ? null : id;
@@ -26,7 +32,7 @@ const toggleExpanded = id => {
 
 const filteredInvoices = computed(() => {
   if (!searchQuery.value.trim()) {
-    return props.invoices;
+    return props.allInvoices.length > 0 ? props.allInvoices : props.invoices;
   }
 
   const query = searchQuery.value.toLowerCase().trim();

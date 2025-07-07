@@ -53,6 +53,9 @@ const showSidebar = computed(() => excelInvoices.value.length > 0);
 const selectedInvoice = computed(
   () => excelInvoices.value[selectedSheetIndex.value] || null
 );
+const allSheetInvoices = computed(() =>
+  excelInvoices.value.flatMap(sheet => sheet.invoices)
+);
 
 const isFetchingList = computed(() => uiFlags.value.isFetching);
 const currentPage = computed(() => Number(meta.value?.currentPage));
@@ -267,10 +270,11 @@ const selectSheet = index => {
 
           <!-- 오른쪽 메인 콘텐츠 - 선택된 시트 정보 -->
           <div class="flex-1 overflow-auto">
-            <InvoicesList
-              v-if="selectedInvoice && selectedInvoice.invoices"
-              :invoices="selectedInvoice.invoices"
-            />
+          <InvoicesList
+            v-if="selectedInvoice && selectedInvoice.invoices"
+            :invoices="selectedInvoice.invoices"
+            :all-invoices="allSheetInvoices"
+          />
           </div>
         </div>
 

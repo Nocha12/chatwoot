@@ -3,7 +3,10 @@ import { ref, computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import InvoiceCard from 'dashboard/components-next/Invoices/InvoiceCard.vue';
 
-const props = defineProps({ invoices: { type: Array, required: true } });
+const props = defineProps({
+  invoices: { type: Array, required: true },
+  allInvoices: { type: Array, default: () => [] },
+});
 const { t } = useI18n();
 
 const expandedCardId = ref(null);
@@ -19,8 +22,10 @@ const filteredInvoices = computed(() => {
   }
 
   const query = searchQuery.value.toLowerCase().trim();
+  const invoicesToFilter =
+    props.allInvoices.length > 0 ? props.allInvoices : props.invoices;
 
-  return props.invoices.filter(invoice => {
+  return invoicesToFilter.filter(invoice => {
     // 제목에서 검색
     if (invoice.title && invoice.title.toLowerCase().includes(query)) {
       return true;

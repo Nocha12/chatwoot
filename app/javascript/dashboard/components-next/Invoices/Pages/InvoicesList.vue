@@ -1,6 +1,7 @@
 <script setup>
-import { ref, computed } from 'vue';
+import { ref, computed, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
+import { debounce } from '@chatwoot/utils';
 import InvoiceCard from 'dashboard/components-next/Invoices/InvoiceCard.vue';
 
 const props = defineProps({
@@ -10,7 +11,14 @@ const props = defineProps({
 const { t } = useI18n();
 
 const expandedCardId = ref(null);
+const searchInput = ref('');
 const searchQuery = ref('');
+
+const updateQuery = debounce(value => {
+  searchQuery.value = value;
+}, 200);
+
+watch(searchInput, updateQuery);
 
 const toggleExpanded = id => {
   expandedCardId.value = expandedCardId.value === id ? null : id;
@@ -23,7 +31,11 @@ const filteredInvoices = computed(() => {
 
   const query = searchQuery.value.toLowerCase().trim();
   const invoicesToFilter =
-    props.allInvoices.length > 0 ? props.allInvoices : props.invoices;
+    props.allInvoices.length > 0 && props.invoices.length > 0
+      ? props.invoices
+      : props.allInvoices.length > 0
+      ? props.allInvoices
+      : props.invoices;
 
   return invoicesToFilter.filter(invoice => {
     // 제목에서 검색
@@ -54,7 +66,7 @@ const filteredInvoices = computed(() => {
     <!-- 검색 입력 필드 -->
     <div class="mb-4">
       <input
-        v-model="searchQuery"
+        v-model="searchInput"
         type="text"
         :placeholder="t('INVOICE_SEARCH.PLACEHOLDER')"
         class="w-full px-3 py-2 border border-n-border rounded-md focus:outline-none focus:ring-2 focus:ring-n-blue-6 focus:border-transparent"
@@ -63,7 +75,7 @@ const filteredInvoices = computed(() => {
 
     <!-- 검색 결과가 없을 때 -->
     <div
-      v-if="filteredInvoices.length === 0 && searchQuery.trim()"
+      v-if="filteredInvoices.length === 0 && searchInput.trim()"
       class="flex items-center justify-center py-10"
     >
       <span class="text-base text-n-slate-11">

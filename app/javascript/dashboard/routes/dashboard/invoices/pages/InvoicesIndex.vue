@@ -49,7 +49,12 @@ const sortState = reactive({
 });
 const excelInvoices = ref([]);
 const selectedSheetIndex = ref(0);
-const showSidebar = computed(() => excelInvoices.value.length > 0);
+const hasSheetData = computed(() => excelInvoices.value.length > 0);
+const isInvoiceSidebarOpen = computed(() => {
+  const { is_invoice_sidebar_open: isOpen } = uiSettings.value || {};
+  return isOpen !== false;
+});
+const showSidebar = computed(() => hasSheetData.value && isInvoiceSidebarOpen.value);
 const selectedInvoice = computed(
   () => excelInvoices.value[selectedSheetIndex.value] || null
 );
@@ -197,6 +202,12 @@ const handleFileChange = async event => {
 const selectSheet = index => {
   selectedSheetIndex.value = index;
 };
+
+const toggleInvoiceSidebar = () => {
+  updateUISettings({
+    is_invoice_sidebar_open: !isInvoiceSidebarOpen.value,
+  });
+};
 </script>
 
 <template>
@@ -241,15 +252,24 @@ const selectSheet = index => {
         </div>
 
         <!-- Excel 시트가 있을 때 사이드바와 메인 콘텐츠 -->
-        <div v-else-if="showSidebar" class="flex h-full">
+        <div v-else-if="hasSheetData" class="flex h-full">
           <!-- 왼쪽 사이드바 - 시트 목록 -->
           <div
+            v-if="showSidebar"
             class="w-64 bg-n-background border-r border-n-border flex-shrink-0"
           >
             <div class="p-4">
-              <h3 class="text-sm font-semibold text-n-slate-12 mb-3">
-                {{ t('INVOICE_SIDEBAR.SHEETS_TITLE') }}
-              </h3>
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="text-sm font-semibold text-n-slate-12">
+                  {{ t('INVOICE_SIDEBAR.SHEETS_TITLE') }}
+                </h3>
+                <button
+                  class="p-1 rounded hover:bg-n-base text-n-slate-11 hover:text-n-slate-12"
+                  @click="toggleInvoiceSidebar"
+                >
+                  <fluent-icon size="16" icon="pane-close-outline" />
+                </button>
+              </div>
               <ul class="space-y-1">
                 <li v-for="(invoice, index) in excelInvoices" :key="invoice.id">
                   <button
@@ -269,12 +289,19 @@ const selectSheet = index => {
           </div>
 
           <!-- 오른쪽 메인 콘텐츠 - 선택된 시트 정보 -->
-          <div class="flex-1 overflow-auto">
-          <InvoicesList
-            v-if="selectedInvoice && selectedInvoice.invoices"
-            :invoices="selectedInvoice.invoices"
-            :all-invoices="allSheetInvoices"
-          />
+          <div class="flex-1 overflow-auto relative">
+            <button
+              v-if="!showSidebar"
+              class="p-1 m-2 rounded hover:bg-n-base text-n-slate-11 hover:text-n-slate-12"
+              @click="toggleInvoiceSidebar"
+            >
+              <fluent-icon size="16" icon="pane-open-outline" />
+            </button>
+            <InvoicesList
+              v-if="selectedInvoice && selectedInvoice.invoices"
+              :invoices="selectedInvoice.invoices"
+              :all-invoices="allSheetInvoices"
+            />
           </div>
         </div>
 

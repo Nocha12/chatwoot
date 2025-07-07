@@ -5,6 +5,7 @@ import { useI18n } from 'vue-i18n';
 import { useStore, useMapGetter } from 'dashboard/composables/store';
 import { debounce } from '@chatwoot/utils';
 import { useUISettings } from 'dashboard/composables/useUISettings';
+import { useStorage } from '@vueuse/core';
 
 import ContactsListLayout from 'dashboard/components-next/Contacts/ContactsListLayout.vue';
 import InvoicesList from 'dashboard/components-next/Invoices/Pages/InvoicesList.vue';
@@ -47,8 +48,9 @@ const sortState = reactive({
   activeSort: initialSort,
   activeOrdering: initialOrder,
 });
-const excelInvoices = ref([]);
-const selectedSheetIndex = ref(0);
+const excelInvoices = useStorage('cw-excel-invoices', [], localStorage);
+const selectedSheetIndex = useStorage('cw-excel-sheet-index', 0, localStorage);
+const isConvertingExcel = ref(false);
 const showSidebar = computed(() => excelInvoices.value.length > 0);
 const selectedInvoice = computed(
   () => excelInvoices.value[selectedSheetIndex.value] || null
@@ -142,8 +144,11 @@ const handleFileChange = async event => {
   const file = event.target.files[0];
   if (!file) return;
 
-  const data = await file.arrayBuffer();
-  const workbook = read(data, { type: 'array' });
+  isConvertingExcel.value = true;
+
+  try {
+    const data = await file.arrayBuffer();
+    const workbook = read(data, { type: 'array' });
 
   // 모든 시트를 순회하면서 각 시트마다 하나의 InvoiceCard 생성
   const convertedSheets = workbook.SheetNames.filter(name =>
@@ -192,6 +197,12 @@ const handleFileChange = async event => {
 
   excelInvoices.value = convertedSheets;
   selectedSheetIndex.value = 0; // 첫 번째 시트를 기본 선택
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error(error);
+  } finally {
+    isConvertingExcel.value = false;
+  }
 };
 
 const selectSheet = index => {
@@ -223,7 +234,7 @@ const selectSheet = index => {
         @change="handleFileChange"
       />
       <div
-        v-if="isFetchingList"
+        v-if="isFetchingList || isConvertingExcel"
         class="flex items-center justify-center py-10 text-n-slate-11"
       >
         <Spinner />

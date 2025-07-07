@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref, computed, reactive, watch } from 'vue';
+import { onMounted, ref, computed, reactive, watch, nextTick } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import { useStore, useMapGetter } from 'dashboard/composables/store';
@@ -90,12 +90,18 @@ const buildSortAttr = () =>
   `${sortState.activeOrdering}${sortState.activeSort}`;
 
 const fetchInvoices = async (page = 1) => {
+  if (excelInvoices.value.length > 0) return;
   await store.dispatch('invoices/get', { page, sortAttr: buildSortAttr() });
   updatePageParam(page);
 };
 
 const searchInvoices = debounce(async (value, page = 1) => {
   searchValue.value = value;
+
+  if (excelInvoices.value.length > 0) {
+    updatePageParam(page, value.trim() ? value : '');
+    return;
+  }
 
   if (!value) {
     updatePageParam(page);
@@ -127,12 +133,14 @@ const handleSort = async ({ sort, order }) => {
 watch(searchQuery, value => {
   if (isFetchingList.value) return;
   searchValue.value = value || '';
+  if (excelInvoices.value.length > 0) return;
   if (value === undefined) {
     fetchInvoices();
   }
 });
 
 onMounted(async () => {
+  if (excelInvoices.value.length > 0) return;
   if (searchQuery.value) {
     await searchInvoices(searchQuery.value, pageNumber.value);
     return;
@@ -145,6 +153,7 @@ const handleFileChange = async event => {
   if (!file) return;
 
   isConvertingExcel.value = true;
+  await nextTick();
 
   try {
     const data = await file.arrayBuffer();

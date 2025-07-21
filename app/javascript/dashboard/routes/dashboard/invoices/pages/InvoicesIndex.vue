@@ -7,7 +7,7 @@ import { debounce } from '@chatwoot/utils';
 import { useUISettings } from 'dashboard/composables/useUISettings';
 import { useStorage } from '@vueuse/core';
 
-import ContactsListLayout from 'dashboard/components-next/Contacts/ContactsListLayout.vue';
+import InvoicesListLayout from 'dashboard/components-next/Invoices/InvoicesListLayout.vue';
 import InvoicesList from 'dashboard/components-next/Invoices/Pages/InvoicesList.vue';
 import Spinner from 'dashboard/components-next/spinner/Spinner.vue';
 
@@ -25,7 +25,6 @@ const { updateUISettings, uiSettings } = useUISettings();
 
 const invoices = useMapGetter('invoices/getInvoicesList');
 const uiFlags = useMapGetter('invoices/getUIFlags');
-const meta = useMapGetter('invoices/getMeta');
 
 const searchQuery = computed(() => route.query?.search);
 const searchValue = ref(searchQuery.value || '');
@@ -60,8 +59,6 @@ const allSheetInvoices = computed(() =>
 );
 
 const isFetchingList = computed(() => uiFlags.value.isFetching);
-const currentPage = computed(() => Number(meta.value?.currentPage));
-const totalItems = computed(() => meta.value?.count);
 const hasInvoices = computed(
   () => invoices.value.length > 0 || excelInvoices.value.length > 0
 );
@@ -159,53 +156,53 @@ const handleFileChange = async event => {
     const data = await file.arrayBuffer();
     const workbook = read(data, { type: 'array' });
 
-  // 모든 시트를 순회하면서 각 시트마다 하나의 InvoiceCard 생성
-  const convertedSheets = workbook.SheetNames.filter(name =>
-    name.endsWith('프린트')
-  )
-    .map((sheetName, sheetIndex) => {
-      const worksheet = workbook.Sheets[sheetName];
-      if (!worksheet) return null;
+    // 모든 시트를 순회하면서 각 시트마다 하나의 InvoiceCard 생성
+    const convertedSheets = workbook.SheetNames.filter(name =>
+      name.endsWith('프린트')
+    )
+      .map((sheetName, sheetIndex) => {
+        const worksheet = workbook.Sheets[sheetName];
+        if (!worksheet) return null;
 
-      const jsonData = utils.sheet_to_json(worksheet, { header: 1 });
+        const jsonData = utils.sheet_to_json(worksheet, { header: 1 });
 
-      if (jsonData.length <= 1) {
-        return {
-          id: `sheet-${sheetIndex}`,
-          title: sheetName,
-          invoices: [],
-        };
-      }
+        if (jsonData.length <= 1) {
+          return {
+            id: `sheet-${sheetIndex}`,
+            title: sheetName,
+            invoices: [],
+          };
+        }
 
-      const headers = jsonData[1];
-      const rows = jsonData.slice(2);
+        const headers = jsonData[1];
+        const rows = jsonData.slice(2);
 
-      // 각 데이터 행을 개별 InvoiceCard로 변환
-      const rowInvoices = rows.map((row, rowIndex) => {
-        const details = {};
-        headers.forEach((header, headerIndex) => {
-          const value = row[headerIndex];
-          details[header] = value;
+        // 각 데이터 행을 개별 InvoiceCard로 변환
+        const rowInvoices = rows.map((row, rowIndex) => {
+          const details = {};
+          headers.forEach((header, headerIndex) => {
+            const value = row[headerIndex];
+            details[header] = value;
+          });
+
+          return {
+            id: `${sheetIndex}-${rowIndex}`,
+            // title: `${t('INVOICE_CARD.ROW_DATA')} ${rowIndex + 1}`,
+            title: `${details['아이디']}, ${details['상품명']}`,
+            details,
+          };
         });
 
         return {
-          id: `${sheetIndex}-${rowIndex}`,
-          // title: `${t('INVOICE_CARD.ROW_DATA')} ${rowIndex + 1}`,
-          title: `${details['아이디']}, ${details['상품명']}`,
-          details,
+          id: `sheet-${sheetIndex}`,
+          title: sheetName,
+          invoices: rowInvoices,
         };
-      });
+      })
+      .filter(Boolean); // null 값 제거
 
-      return {
-        id: `sheet-${sheetIndex}`,
-        title: sheetName,
-        invoices: rowInvoices,
-      };
-    })
-    .filter(Boolean); // null 값 제거
-
-  excelInvoices.value = convertedSheets;
-  selectedSheetIndex.value = 0; // 첫 번째 시트를 기본 선택
+    excelInvoices.value = convertedSheets;
+    selectedSheetIndex.value = 0; // 첫 번째 시트를 기본 선택
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error(error);
@@ -223,16 +220,12 @@ const selectSheet = index => {
   <div
     class="flex flex-col justify-between flex-1 h-full m-0 overflow-auto bg-n-background"
   >
-    <ContactsListLayout
+    <InvoicesListLayout
       :search-value="searchValue"
       :header-title="headerTitle"
-      :current-page="currentPage"
-      :total-items="totalItems"
-      :show-pagination-footer="!isFetchingList && hasInvoices"
       :active-sort="sortState.activeSort"
       :active-ordering="sortState.activeOrdering"
       :is-fetching-list="isFetchingList"
-      @update:current-page="fetchInvoices"
       @search="searchInvoices"
       @update:sort="handleSort"
     >
@@ -290,17 +283,17 @@ const selectSheet = index => {
 
           <!-- 오른쪽 메인 콘텐츠 - 선택된 시트 정보 -->
           <div class="flex-1 overflow-auto">
-          <InvoicesList
-            v-if="selectedInvoice && selectedInvoice.invoices"
-            :invoices="selectedInvoice.invoices"
-            :all-invoices="allSheetInvoices"
-          />
+            <InvoicesList
+              v-if="selectedInvoice && selectedInvoice.invoices"
+              :invoices="selectedInvoice.invoices"
+              :all-invoices="allSheetInvoices"
+            />
           </div>
         </div>
 
         <!-- 일반 인보이스 목록 (Excel이 아닌 경우) -->
         <InvoicesList v-else :invoices="invoices" />
       </template>
-    </ContactsListLayout>
+    </InvoicesListLayout>
   </div>
 </template>
